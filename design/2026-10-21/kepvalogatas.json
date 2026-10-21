@@ -13,6 +13,32 @@
     "source_caption": ""
   },
   {
+    "key": "family",
+    "purpose": "Világos főoldal: korábbi nyitókép",
+    "source_path": "assets/source/website/wp-579-slider-1.png",
+    "source_url": "https://meshdent.hu/wp-content/uploads/2021/09/slider-1.png",
+    "prototype_path": "prototype/assets/family.webp",
+    "width": 1920,
+    "height": 745,
+    "alt_proposal": "Mosolygó szülők két gyermekükkel a MeshDent korábbi főoldalának családi képén",
+    "sha256": "5c2924034bb10c0f9995d8f66c7a358007bd42b3073ee0eb3d9c9d04707b226c",
+    "transformation": "WebP quality 85 encoding; original dimensions; no retouching",
+    "source_caption": ""
+  },
+  {
+    "key": "joy",
+    "purpose": "Világos főoldal: emberközpontú hangulatkép a meglévő oldalról",
+    "source_path": "assets/source/website/wp-578-gluten_intolerance_kids.jpg",
+    "source_url": "https://meshdent.hu/wp-content/uploads/2021/09/gluten_intolerance_kids.jpeg",
+    "prototype_path": "prototype/assets/joy.jpg",
+    "width": 802,
+    "height": 554,
+    "alt_proposal": "Nevető édesanya és kislánya egy világos szobában",
+    "sha256": "ffc520a000b8d69beaa415dbd34b309e9d79d8513af3a8de8d491154225cef55",
+    "transformation": "none; byte-identical copy of archived source",
+    "source_caption": ""
+  },
+  {
     "key": "full-arch",
     "purpose": "Főoldali hero és implantátumos referencia",
     "source_path": "assets/source/instagram/import-2026-10-21/media/2026-02-09_DUi3W8Fj0lx/DUi3W8Fj0lx_01.jpg",

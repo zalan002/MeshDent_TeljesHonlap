@@ -13,6 +13,19 @@
     "open_content_item": ""
   },
   {
+    "route": "/vilagosabb",
+    "prototype": "vilagosabb.html",
+    "h1": "Világos változat — Digitális fogtechnika Budapesten",
+    "title": "Világos változat — Digitális fogtechnika Budapesten | MeshDent",
+    "meta_description": "A MeshDent világos, barátságos főoldalváltozata. Digitális fogtechnika Budapesten, fogpótlások és személyes szakmai együttműködés.",
+    "search_intent": "alternatív főoldalterv",
+    "primary_cta": "Kapcsolatfelvétel",
+    "index_production_proposal": "noindex, nofollow",
+    "canonical": "https://meshdent.hu/vilagosabb",
+    "structured_data_proposal": "WebPage",
+    "open_content_item": "Külön látványváltozat; az eredeti főoldal megmarad."
+  },
+  {
     "route": "/same-day-cirkon-koronak-hidak/",
     "prototype": "same-day-cirkon-koronak-hidak.html",
     "h1": "SAME DAY cirkon koronák és hidak",

@@ -4,6 +4,8 @@ Nyissa meg a MeshDent-latvanyterv.html fájlt böngészőben.
 A képek, stílusok és programkód be vannak ágyazva; nincs telepítés.
 Az oldalválasztóval és az Asztali / Mobil gombokkal járható be a terv.
 A fogív alatt Térbeli, Elölnézet és Rágófelszín nézet választható.
+A „Világos változat” külön főoldal a logó színeivel és családi nyitóképpel.
+Weben: /vilagosabb; helyben: prototype/vilagosabb.html.
 
 TELJES-HONLAPTERV.md: teljes szöveges és technikai terv.
 FOOLDAL-02.md: a főoldal új megjelenése, grafikája és mozgása.

@@ -19,17 +19,20 @@ SELECTION = []
 esc = html.escape
 
 
-def asset(key, *, post=None, wp=None, alt='', purpose=''):
+def asset(key, *, post=None, wp=None, alt='', purpose='', derivative=None):
     found = next(x for x in CATALOG if (x.get('post_id') == post and x.get('order') == 1) if post) if post else next(x for x in CATALOG if x.get('wp_id') == wp)
     source = ROOT / found['local_path']
-    dest = OUT / 'assets' / (key + source.suffix)
+    exported = ROOT / derivative if derivative else source
+    dest = OUT / 'assets' / (key + exported.suffix)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, dest)
+    shutil.copyfile(exported, dest)
     ASSETS[key] = {'src': 'assets/' + dest.name, 'alt': alt, 'width': found['width'], 'height': found['height'], 'source': found['source_url']}
-    SELECTION.append({'key': key, 'purpose': purpose, 'source_path': found['local_path'], 'source_url': found['source_url'], 'prototype_path': str(dest.relative_to(BASE)), 'width': found['width'], 'height': found['height'], 'alt_proposal': alt, 'sha256': hashlib.sha256(dest.read_bytes()).hexdigest(), 'transformation': 'none; byte-identical copy of archived source', 'source_caption': found.get('caption', '')})
+    SELECTION.append({'key': key, 'purpose': purpose, 'source_path': found['local_path'], 'source_url': found['source_url'], 'prototype_path': str(dest.relative_to(BASE)), 'width': found['width'], 'height': found['height'], 'alt_proposal': alt, 'sha256': hashlib.sha256(dest.read_bytes()).hexdigest(), 'transformation': 'WebP quality 85 encoding; original dimensions; no retouching' if derivative else 'none; byte-identical copy of archived source', 'source_caption': found.get('caption', '')})
 
 
 asset('logo', wp=621, alt='MeshDent digitális fogtechnika', purpose='Közös fejléc, meglévő logó')
+asset('family', wp=579, alt='Mosolygó szülők két gyermekükkel a MeshDent korábbi főoldalának családi képén', purpose='Világos főoldal: korábbi nyitókép', derivative='assets/derived/website/family.webp')
+asset('joy', wp=578, alt='Nevető édesanya és kislánya egy világos szobában', purpose='Világos főoldal: emberközpontú hangulatkép a meglévő oldalról')
 asset('full-arch', post='DUi3W8Fj0lx', alt='Teljes íves fogpótlás látható implantátumkapcsolatokkal, fekete háttéren', purpose='Főoldali hero és implantátumos referencia')
 asset('detail', post='DZIsczGGhTb', alt='A MeshDent fogpótlásának elülső fogai és ínyrésze közelről', purpose='Saját referenciamunka, Rólunk')
 asset('esthetic', post='DXsCFGZkazP', alt='Anatómikus fogpótlás világos modellen, részletes fogfelszínekkel', purpose='ESTHETIC és Munkáink; anyagmegnevezés a képaláírás alapján')
@@ -123,10 +126,20 @@ def footer():
 def page(filename,title,description,body,route='',intent='',cta='',review='',schema='WebPage',index='index, follow',chrome=True):
     seo_title=SEO_TITLES.get(route,title+' | MeshDent')
     home_resources='<link rel="stylesheet" href="home-v2.css"><script src="dental-arch.js" defer></script><script src="home-v2.js" defer></script>' if filename=='index' else ''
+    if filename=='vilagosabb':
+        home_resources='<link rel="stylesheet" href="light.css">'
     header_html=header(filename) if chrome else ''
     footer_html=footer() if chrome else ''
     app_resources='<script src="app.js" defer></script>' if chrome else ''
     noscript_html='<noscript><p class="noscript wrap">A szövegek és az oldalak JavaScript nélkül is elérhetők. A mobilmenü helyett a lábléc linkjei használhatók. Az űrlappróba, a szűrés és a képnagyítás JavaScriptet igényel.</p></noscript>' if chrome else ''
+    if filename=='vilagosabb':
+        header_html=header_html.replace('MESHDENT · LÁTVÁNYTERV 01 · 2026.10.21.','MESHDENT · VILÁGOS VÁLTOZAT').replace('<a href="terv.html">Oldaljegyzék és terv ↗</a>','<a href="index.html">Eredeti változat ↗</a>').replace('href="index.html" aria-label="MeshDent főoldal"','href="vilagosabb.html" aria-label="MeshDent világos főoldal"')
+        footer_html=footer_html.replace('<a class="footer-wordmark" href="index.html">MeshDent<span aria-hidden="true">↗</span></a>','<a class="footer-wordmark" href="vilagosabb.html">'+img('logo')+'</a>')
+    if filename=='vilagosabb':
+        light_arrow=HOME_ARROW.replace('h-arrow','l-arrow')
+        body=body.replace('↗',light_arrow)
+        header_html=header_html.replace('↗',light_arrow)
+        footer_html=footer_html.replace('↗',light_arrow)
     if filename=='index':
         body=body.replace('↗',HOME_ARROW)
         header_html=header_html.replace('↗',HOME_ARROW).replace('LÁTVÁNYTERV 01','LÁTVÁNYTERV 02')
@@ -191,6 +204,13 @@ fallback='data:image/svg+xml;base64,'+base64.b64encode((BASE/'prototype/dental-a
 home=(BASE/'homepage-v2.html').read_text().replace('{{DENTAL_FALLBACK}}','<img src="'+fallback+'" width="640" height="510" alt="">').replace('{{BENEFITS}}',benefit_html).replace('{{SERVICES}}',''.join(service_rows)).replace('{{GALLERY}}',gallery(WORKS[:3])).replace('{{CONTACT}}',contact_section('Kapcsolat a laborral.'))
 
 page('index','Digitális fogtechnika Budapesten.','MeshDent digitális fogtechnikai labor Budapesten. Digitális tervezés, cirkon koronák, implantátumos fogpótlások és rendelő–labor együttműködés.',home,'/','digitális fogtechnika Budapest; fogtechnikai labor','Kapcsolatfelvétel',schema='Organization; WebSite; WebPage')
+
+light_services=[]
+for i,s in enumerate(ALL_SERVICES,1):
+    light_services.append(f'<a class="l-service-card" href="{s["slug"]}.html"><div class="l-card-top"><span>0{i}</span><span aria-hidden="true">↗</span></div><h3>{esc(s["short"])}</h3><p>{esc(s["tag"])}</p>{img(s["image"])}</a>')
+light_steps=''.join(f'<li><span>0{i}</span><h3>{esc(title)}</h3><p>{esc(text)}</p></li>' for i,(title,text) in enumerate(STEPS,1))
+light=(BASE/'homepage-light.html').read_text().replace('{{FAMILY}}',img('family',True)).replace('{{JOY}}',img('joy')).replace('{{SERVICES}}',''.join(light_services)).replace('{{STEPS}}',light_steps).replace('{{GALLERY}}',gallery(WORKS[:3]))
+page('vilagosabb','Világos változat — Digitális fogtechnika Budapesten','A MeshDent világos, barátságos főoldalváltozata. Digitális fogtechnika Budapesten, fogpótlások és személyes szakmai együttműködés.',light,'/vilagosabb','alternatív főoldalterv','Kapcsolatfelvétel','Külön látványváltozat; az eredeti főoldal megmarad.',index='noindex, nofollow')
 
 for s in ALL_SERVICES:
     blocks=''.join(f'<div class="copy-block"><h2>{esc(title)}</h2><p>{esc(text)}</p></div>' for title,text in s['blocks'])

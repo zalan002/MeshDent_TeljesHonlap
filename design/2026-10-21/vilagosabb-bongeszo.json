@@ -1,0 +1,45 @@
+{
+  "scope": "local production build /vilagosabb",
+  "layouts": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "width": 640,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "titleFits": true
+    }
+  ],
+  "no_arch": true,
+  "family": true,
+  "responsive": true,
+  "images": true,
+  "gallery": true,
+  "menu": true,
+  "freedom": true,
+  "viewer": true,
+  "exceptions": [],
+  "result": "PASS"
+}
