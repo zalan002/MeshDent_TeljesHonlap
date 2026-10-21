@@ -26,6 +26,32 @@
     "open_content_item": "Külön látványváltozat; az eredeti főoldal megmarad."
   },
   {
+    "route": "/folyamat",
+    "prototype": "folyamat.html",
+    "h1": "A szkenneléstől a kész fogpótlásig",
+    "title": "A szkenneléstől a kész fogpótlásig | MeshDent",
+    "meta_description": "Digitális fogtechnika Budapesten. A szkenneléstől a kész fogpótlásig. MeshDent főoldalváltozat, saját referenciákkal és közvetlen szakmai együttműködéssel.",
+    "search_intent": "alternatív főoldalterv",
+    "primary_cta": "Kapcsolatfelvétel",
+    "index_production_proposal": "noindex, nofollow",
+    "canonical": "https://meshdent.hu/folyamat",
+    "structured_data_proposal": "WebPage",
+    "open_content_item": "Önálló látványváltozat, az eredeti oldalak mellett."
+  },
+  {
+    "route": "/osszekapcsolva",
+    "prototype": "osszekapcsolva.html",
+    "h1": "Rendelő és labor, összekapcsolva",
+    "title": "Rendelő és labor, összekapcsolva | MeshDent",
+    "meta_description": "Digitális fogtechnika Budapesten. Rendelő és labor, összekapcsolva. MeshDent főoldalváltozat, saját referenciákkal és közvetlen szakmai együttműködéssel.",
+    "search_intent": "alternatív főoldalterv",
+    "primary_cta": "Kapcsolatfelvétel",
+    "index_production_proposal": "noindex, nofollow",
+    "canonical": "https://meshdent.hu/osszekapcsolva",
+    "structured_data_proposal": "WebPage",
+    "open_content_item": "Önálló látványváltozat, az eredeti oldalak mellett."
+  },
+  {
     "route": "/same-day-cirkon-koronak-hidak/",
     "prototype": "same-day-cirkon-koronak-hidak.html",
     "h1": "SAME DAY cirkon koronák és hidak",

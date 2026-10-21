@@ -1,0 +1,98 @@
+{
+  "scope": "local production build: /folyamat and /osszekapcsolva",
+  "layouts": [
+    {
+      "route": "folyamat",
+      "width": 320,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "folyamat",
+      "width": 390,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "folyamat",
+      "width": 640,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "folyamat",
+      "width": 768,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "folyamat",
+      "width": 1024,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "folyamat",
+      "width": 1440,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 320,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 390,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 640,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 768,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 1024,
+      "noOverflow": true,
+      "titleFits": true
+    },
+    {
+      "route": "osszekapcsolva",
+      "width": 1440,
+      "noOverflow": true,
+      "titleFits": true
+    }
+  ],
+  "story": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "story_all": true,
+  "folyamat_menu": true,
+  "folyamat_gallery": true,
+  "folyamat_viewer": true,
+  "network_details": true,
+  "pause": true,
+  "resume": true,
+  "reduced_motion": true,
+  "osszekapcsolva_menu": true,
+  "osszekapcsolva_gallery": true,
+  "osszekapcsolva_viewer": true,
+  "responsive": true,
+  "nojs_story": true,
+  "exceptions": [],
+  "result": "PASS"
+}

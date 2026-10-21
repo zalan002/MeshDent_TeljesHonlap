@@ -6,6 +6,8 @@ A MeshDent teljes honlapjának megújítási projektje.
 
 - [Új főoldal és bejárható aloldalak](https://meshdentteljeshonlap.vercel.app/)
 - [Világos, barátságos főoldalváltozat](https://meshdentteljeshonlap.vercel.app/vilagosabb) — a logó színeivel és a korábbi családi nyitóképpel.
+- [03 · A szkenneléstől a kész fogpótlásig](https://meshdentteljeshonlap.vercel.app/folyamat) — görgetéshez kapcsolódó képek és a munkafolyamat négy fejezete.
+- [04 · Rendelő és labor, összekapcsolva](https://meshdentteljeshonlap.vercel.app/osszekapcsolva) — interaktív kapcsolati ábra, világos megjelenés.
 - [Teljes látványterv oldalválasztóval és mobilnézettel](https://meshdentteljeshonlap.vercel.app/latvanyterv)
 - [Oldaljegyzék és részletes terv](https://meshdentteljeshonlap.vercel.app/terv)
 - [Korábbi, 03-as tervcsomag](artifacts/MeshDent-honlapterv-2026-10-21-v3.zip)
@@ -19,6 +21,7 @@ A főcímen közvetlenül a főoldal jelenik meg. A `/latvanyterv` az oldalvála
 - [Egy fájlból megnyitható, interaktív látványterv](design/2026-10-21/MeshDent-latvanyterv.html) — 02-es főoldalkoncepció, 16 fogas, anatómiai részletekkel kidolgozott fogívgrafika, három kameraállás, asztali/mobil nézet, oldalválasztó és saját képek.
 - [Az új főoldal vizuális és mozgási terve](design/2026-10-21/FOOLDAL-02.md).
 - [A világos változat színei, képei és ellenőrzése](design/2026-10-21/VILAGOSABB.md).
+- [A harmadik és negyedik változat működése és ellenőrzése](design/2026-10-21/KONCEPCIOK-03-04.md).
 - [Teljes honlapterv](design/2026-10-21/TELJES-HONLAPTERV.md) — oldalszerkezet, megjelenés, tartalom, CRM, Google-mérés, SEO és AI-keresés.
 - [Oldalankénti SEO-terv](design/2026-10-21/oldalterv.csv) és [képválogatás](design/2026-10-21/kepvalogatas.json).
 - [Ellenőrzések és a prototípus határa](design/2026-10-21/ELLENORZES.md).

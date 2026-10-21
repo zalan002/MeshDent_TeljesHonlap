@@ -6,6 +6,9 @@ Az oldalválasztóval és az Asztali / Mobil gombokkal járható be a terv.
 A fogív alatt Térbeli, Elölnézet és Rágófelszín nézet választható.
 A „Világos változat” külön főoldal a logó színeivel és családi nyitóképpel.
 Weben: /vilagosabb; helyben: prototype/vilagosabb.html.
+A 03-as változat a munkafolyamatot mutatja be: /folyamat.
+A 04-es változat a rendelő és a labor kapcsolatát mutatja be: /osszekapcsolva.
+Mindkettő megnyitható a látványterv oldalválasztójából is.
 
 TELJES-HONLAPTERV.md: teljes szöveges és technikai terv.
 FOOLDAL-02.md: a főoldal új megjelenése, grafikája és mozgása.

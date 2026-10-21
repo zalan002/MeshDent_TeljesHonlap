@@ -128,6 +128,8 @@ def page(filename,title,description,body,route='',intent='',cta='',review='',sch
     home_resources='<link rel="stylesheet" href="home-v2.css"><script src="dental-arch.js" defer></script><script src="home-v2.js" defer></script>' if filename=='index' else ''
     if filename=='vilagosabb':
         home_resources='<link rel="stylesheet" href="light.css">'
+    if filename in ['folyamat','osszekapcsolva']:
+        home_resources='<link rel="stylesheet" href="concepts.css"><script src="concepts.js" defer></script>'
     header_html=header(filename) if chrome else ''
     footer_html=footer() if chrome else ''
     app_resources='<script src="app.js" defer></script>' if chrome else ''
@@ -140,6 +142,15 @@ def page(filename,title,description,body,route='',intent='',cta='',review='',sch
         body=body.replace('↗',light_arrow)
         header_html=header_html.replace('↗',light_arrow)
         footer_html=footer_html.replace('↗',light_arrow)
+    if filename in ['folyamat','osszekapcsolva']:
+        variant='03 · A MUNKAFOLYAMAT' if filename=='folyamat' else '04 · ÖSSZEKAPCSOLVA'
+        switch='<nav class="concept-switch" aria-label="Főoldalváltozatok">'+''.join(f'<a href="{name}.html"'+(' aria-current="page"' if name==filename else '')+f'>{label}</a>' for name,label in [('index','01 Eredeti'),('vilagosabb','02 Világos'),('folyamat','03 Folyamat'),('osszekapcsolva','04 Összekapcsolva')])+'</nav>'
+        header_html=header_html.replace('MESHDENT · LÁTVÁNYTERV 01 · 2026.10.21.','MESHDENT · '+variant).replace('<a href="terv.html">Oldaljegyzék és terv ↗</a>',switch).replace('href="index.html" aria-label="MeshDent főoldal"',f'href="{filename}.html" aria-label="MeshDent főoldal"')
+        footer_html=footer_html.replace('<a class="footer-wordmark" href="index.html">MeshDent<span aria-hidden="true">↗</span></a>',f'<a class="footer-wordmark" href="{filename}.html">'+img('logo')+'</a>')
+        variant_arrow=HOME_ARROW.replace('h-arrow','v-arrow')
+        body=body.replace('↗',variant_arrow)
+        header_html=header_html.replace('↗',variant_arrow)
+        footer_html=footer_html.replace('↗',variant_arrow)
     if filename=='index':
         body=body.replace('↗',HOME_ARROW)
         header_html=header_html.replace('↗',HOME_ARROW).replace('LÁTVÁNYTERV 01','LÁTVÁNYTERV 02')
@@ -211,6 +222,17 @@ for i,s in enumerate(ALL_SERVICES,1):
 light_steps=''.join(f'<li><span>0{i}</span><h3>{esc(title)}</h3><p>{esc(text)}</p></li>' for i,(title,text) in enumerate(STEPS,1))
 light=(BASE/'homepage-light.html').read_text().replace('{{FAMILY}}',img('family',True)).replace('{{JOY}}',img('joy')).replace('{{SERVICES}}',''.join(light_services)).replace('{{STEPS}}',light_steps).replace('{{GALLERY}}',gallery(WORKS[:3]))
 page('vilagosabb','Világos változat — Digitális fogtechnika Budapesten','A MeshDent világos, barátságos főoldalváltozata. Digitális fogtechnika Budapesten, fogpótlások és személyes szakmai együttműködés.',light,'/vilagosabb','alternatív főoldalterv','Kapcsolatfelvétel','Külön látványváltozat; az eredeti főoldal megmarad.',index='noindex, nofollow')
+
+concept_tech=f'''<div class="v-technologies"><article class="v-tech"><div><p class="v-eyebrow">OXO / SZOLGÁLTATÁS</p><h3>Implantátumok<br>digitális helyzete.</h3><p>Extraorális implantátumpozíció-meghatározás, a rendelő és a labor együttműködésében.</p>{link('oxo-implant-service.html','Az OXO szolgáltatás','v-link')}</div>{img('oxo')}</article><article class="v-tech"><div><p class="v-eyebrow">FREEDOM AIR / ESZKÖZ</p><h3>Digitális<br>adatfelvétel.</h3><p>Intraorális szkennelés és fotogrammetria. Ismerje meg a meglévő Freedom Air oldalt.</p>{link('FreedomaAir.html','A Freedom Air oldala','v-link')}</div>{img('freedom')}</article></div>'''
+concept_contact='''<div class="v-contact-bottom"><div><p>Új munka vagy szakmai kérdés? Keresse közvetlenül a MeshDent csapatát.</p><a class="v-button" href="kapcsolat.html">Kapcsolatfelvétel <span aria-hidden="true">↗</span></a></div><div class="v-contact-links"><div><small>Szabó Richárd</small><a href="tel:+36703619962">+36 70 361 9962</a></div><div><small>Buczi János</small><a href="tel:+36703534000">+36 70 353 4000</a></div><div><small>E-mail</small><a href="mailto:meshdentkft@gmail.com">meshdentkft@gmail.com</a></div></div></div>'''
+process_services=''.join(f'<a class="v-service-row" href="{s["slug"]}.html"><span>0{i}</span><div><h3>{esc(s["short"])}</h3><p>{esc(s["tag"])}</p></div><span aria-hidden="true">↗</span></a>' for i,s in enumerate(ALL_SERVICES,1))
+connected_services=''.join(f'<a class="c-service-card" href="{s["slug"]}.html"><div class="c-service-top"><span>0{i}</span><span aria-hidden="true">↗</span></div><h3>{esc(s["short"])}</h3><p>{esc(s["tag"])}</p></a>' for i,s in enumerate(ALL_SERVICES,1))
+for filename,template,title,service_content in [
+    ('folyamat','homepage-process.html','A szkenneléstől a kész fogpótlásig',process_services),
+    ('osszekapcsolva','homepage-connected.html','Rendelő és labor, összekapcsolva',connected_services),
+]:
+    concept=(BASE/template).read_text().replace('{{SERVICES}}',service_content).replace('{{TECHNOLOGIES}}',concept_tech).replace('{{GALLERY}}',gallery(WORKS[:3])).replace('{{CONTACT}}',concept_contact)
+    page(filename,title,'Digitális fogtechnika Budapesten. '+title+'. MeshDent főoldalváltozat, saját referenciákkal és közvetlen szakmai együttműködéssel.',concept,'/'+filename,'alternatív főoldalterv','Kapcsolatfelvétel','Önálló látványváltozat, az eredeti oldalak mellett.',index='noindex, nofollow')
 
 for s in ALL_SERVICES:
     blocks=''.join(f'<div class="copy-block"><h2>{esc(title)}</h2><p>{esc(text)}</p></div>' for title,text in s['blocks'])
