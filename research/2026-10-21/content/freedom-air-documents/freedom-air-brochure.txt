@@ -1,0 +1,78 @@
+Beyond Scanning : Specialized for All-on-X
+Features
+
+
+
+
+                                                                                                               PIM Solution                              Precise Implant Measurement Solution
+       Large Scan Area                                    Voice Memo
+                                                                                                             All-on-X optimized scanning solution for both clinicians and patients.
+       With a wide scanning area of 18.5 × 15mm and       Memos can be recorded using the voice
+       a deep depth of field of 25mm, it enables fast     recognition feature, with automatic summaries
+                                                                                                                         Limitations of Other IOS                                                                      PIM Solution
+       and precise acquisition of scan data.              provided by AI.
+
+                 18.5mm
+
+
+                  large    15mm                                                      Voice Memo
+                                                                                     - #45 Crown, Shade A2
+                                                                                     - #16 Zirconia Crown
+
+
+
+                                                                                                                              Requires a full-arch scan                                                 Just One-Shot Scan
+                                                                                                                                    Risk of data distortion                                              Ensures high precision
+
+
+
+       LED Light                                           DOF SYNC
+       The scanner's status and cable connection can       DOF SYNC : Designed for user convenience,         Scan Procedure
+       be intuitively checked through the LED light        DOF SYNC enables the fast and seamless
+       indicator.                                          transmission of scan data to partners.                                                        1                                          2                                   3
+
+
+
+
+                                                                                                             Intra-Oral Scan                                  Scan Body Scan                              Merged Scan Body Data
+
+                                                                                                             Proceed with edentulous                          Scan the scan body in just one              Use an IOS to scan the scan body
+                                                                                                             scanning as usual.                               shot outside the mouth with                 inside the mouth.
+       Lightweight                    145g
+                                                                                D-Pad Control                                                                 Guide Tool.
+
+           It weighs only 145g, making it the lightest                          The scanner is equipped
+           intraoral scanner currently available on the                           with a D-Pad control,
+           market. Additionally, it significantly                                   enabling fast and        Technical Specification
+           reduces wrist fatigue during scan-                                         hygienic operation.
+                                                                                                                             Dimensions                                  219 x 35 x 36.6mm
+           ning, enhancing user comfort.                                                                                       Weight                                145g (Including Normal Tip)
+
+                                                                                                                                                                   Normal Tip : 25 x 19.9mm*3ea
+                                                                                                                                        Number of Tips
+                                                                                                                                                                    Small Tip : 16.3 x 13.5mm*1ea
+                                                                                                                  Scan Tip
+                                                                                                                                                                      Normal Tip : 18.5 x 15mm
+                                                                                                                                         Field of View
+                                                                                                                                                                        Small Tip : 10 x 9mm
+
+                                                                                                                             Scan Depth                                        25mm
+
+                                                                                                                             Data Output                                    STL, PLY, OBJ                         Normal Tip      Small Tip
+About DOF Inc.
+DOF is a CAD/CAM solution company specializing in developing the world’s best 3D         DOF promises to grow as we communicate with our customers. Every product provided
+dental scanners and dental milling machines. Since the foundation in 2012, DOF has       by DOF is planned and designed through taking into consideration what functions are
+been bringing a new sensation to the industry and has been indicating a rapid growth     required by our customers and what may be considered inconvenient by our customers.
+through developing camera moving scanners. DOF always leads the market through           Even after a product is complete, DOF continuously applies the feedback provided by
+developing innovative products such as FREEDOM X5, a 5-megapixel 3D dental scanner       our customers to improve our products. To help our customers work more conveniently
+boasting the highest precision in the world, and FREEDOM F, a face scanner capable of    and joyfully is the dream and future DOF envisions.
+directly reproducing the face of a patient into 3D data.
+
+
+
+
+DOF Inc. #601-603, 77, Seongsuil-ro, Seongdong-gu, Seoul, 04790 Korea (070-5057-5711)
+
+Copyright ⓒ 2025 DOF Inc. All rights reserved.
+Design and specifications are subject to change without notice to improve performance.
+

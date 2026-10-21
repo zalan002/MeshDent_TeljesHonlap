@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "media_files_checked": 317,
+  "sha256_checks": 317,
+  "raster_images_verified": 283,
+  "pdf_signatures_checked": 3,
+  "svg_files_parsed": 30,
+  "mp4_signatures_checked": 1,
+  "instagram_post_captions_checked": 168,
+  "instagram_media_relations_checked": 183,
+  "page_snapshots_checked": 13,
+  "catalogue_cards": 317,
+  "catalogue_local_references_checked": 948,
+  "instagram_standalone_cards": 168,
+  "instagram_embedded_previews_checked": 183,
+  "python_scripts_compiled": 3,
+  "unique_media_sha256": 316,
+  "errors": [],
+  "not_tested": [
+    "Browser rendering and interactive filtering",
+    "Live Instagram completeness or missing Reel download",
+    "Live CRM submissions",
+    "Production GA4/Ads reception",
+    "Original-origin byte identity for website copies"
+  ]
+}

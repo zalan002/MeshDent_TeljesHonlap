@@ -1,0 +1,28 @@
+{
+  "imported_on": "2026-10-21",
+  "input_archive": "MeshDent_Instagram_2026-10-21.zip",
+  "archive_sha256": "e1500cec14abb40c19ceefbfc680776850bfcb353296cbf4d8bbd167f5d4b804",
+  "html_sha256": "4cc64df3cf007280ff495d45b4b695050a25e743a98cecf686dd27e8f75564d3",
+  "separate_html_matches_zip": true,
+  "archive_files": 355,
+  "posts_catalogued": 168,
+  "photo_posts": 167,
+  "carousel_posts": 12,
+  "photos": 182,
+  "reel_cover_images": 1,
+  "videos_downloaded": 0,
+  "videos_missing": 1,
+  "image_files": 183,
+  "unique_image_sha256": 182,
+  "duplicate_image_occurrences": 1,
+  "media_bytes": 13451158,
+  "earliest_post_utc": "2016-07-07T18:28:34.000Z",
+  "latest_post_utc": "2026-06-03T19:41:53.000Z",
+  "validation": "PASS: ZIP integrity, all image hashes/sizes/dimensions, manifest coverage, separate HTML equality",
+  "provenance": "User-supplied export; live Instagram completeness was not independently rechecked in this chat",
+  "scope_exclusions": [
+    "Stories",
+    "Tagged/reposted content from others",
+    "Other users comments"
+  ]
+}

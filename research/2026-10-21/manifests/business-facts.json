@@ -1,0 +1,40 @@
+{
+  "collected_at": "2026-10-21",
+  "verification_scope": "Public website and public Instagram metadata; not an official company-register check",
+  "name": "MeshDent Kft.",
+  "business_type": "digitális fogtechnikai laboratórium",
+  "address": {
+    "postal_code": "1139",
+    "city": "Budapest",
+    "street": "Petneházy u. 14.",
+    "country": "HU"
+  },
+  "email": "meshdentkft@gmail.com",
+  "contacts": [
+    {
+      "name": "Szabó Richárd",
+      "phone": "+36703619962"
+    },
+    {
+      "name": "Buczi János",
+      "phone": "+36703534000"
+    }
+  ],
+  "instagram": "https://www.instagram.com/meshdent_lab_budapest/",
+  "sources": [
+    "https://meshdent.hu/",
+    "https://meshdent.hu/kapcsolat/",
+    "https://www.instagram.com/meshdent_lab_budapest/"
+  ],
+  "unresolved_email_variant": {
+    "value": "hello@meshdent.hu",
+    "source": "Meshdent/app/koszonjuk/page.tsx"
+  },
+  "unknown_fields": [
+    "opening_hours",
+    "company_registration_number",
+    "tax_id",
+    "founding_year",
+    "staff_qualifications"
+  ]
+}

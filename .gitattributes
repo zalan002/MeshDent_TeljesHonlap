@@ -1,0 +1,4 @@
+# Preserve archived media exactly, including imported text sidecars and SVGs.
+assets/source/** -text -diff
+design/**/prototype/assets/** -text -diff
+*.zip -text -diff

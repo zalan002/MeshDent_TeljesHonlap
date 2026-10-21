@@ -1,0 +1,73 @@
+{
+  "result": "PASS",
+  "prototype_html_files": 16,
+  "planned_content_routes": 14,
+  "original_routes_covered": 13,
+  "standalone_views": 17,
+  "local_references_checked": 671,
+  "source_identical_images": 16,
+  "embedded_images": 16,
+  "contrast_ratios": {
+    "body": 10.73,
+    "secondary": 5.69,
+    "button": 5.17,
+    "dark text": 8.01,
+    "field note": 6.27
+  },
+  "javascript_syntax": "PASS",
+  "python_compile": "PASS",
+  "errors": [],
+  "not_tested": [
+    "Cross-browser and real-device testing",
+    "Full-site accessibility audit and field performance",
+    "Live CRM and analytics",
+    "Full Freedom Air migration"
+  ],
+  "standalone_assembly_checks": {
+    "views": 17,
+    "result": "PASS",
+    "scope": "HTML composition and script compilation in Node; not browser execution",
+    "homepage_notes_anchor": "PASS"
+  },
+  "homepage_v2_browser_checks": "PASS; see fooldal-02-bongeszo.json",
+  "unchanged_v1_prototype_pages": [
+    "jogi-oldalak.html",
+    "partnereink.html",
+    "FreedomaAir.html",
+    "kapcsolat.html",
+    "extraoralis-scanner-fogpotlas.html",
+    "same-day-cirkon-koronak-hidak.html",
+    "rolunk.html",
+    "munkaink.html",
+    "leplezett-zirkon-korona.html",
+    "lathatatlan-fogszabalyozas.html",
+    "insta.html",
+    "implantatumra-keszult.html",
+    "oxo-implant-service.html",
+    "esthetic-anatomikus-zirkon-fogpotlas.html"
+  ],
+  "homepage_v2_contrast_ratios": {
+    "ivory_on_forest": 13.88,
+    "lime_on_forest": 12.83
+  },
+  "generated_svg_fallbacks": 1,
+  "arch_v3_browser_checks": "PASS; see fogiv-03-bongeszo.json",
+  "arch_v3_geometry_checks": "PASS; see fogiv-03-geometria.json",
+  "unchanged_v2_prototype_pages": [
+    "jogi-oldalak.html",
+    "partnereink.html",
+    "FreedomaAir.html",
+    "terv.html",
+    "kapcsolat.html",
+    "extraoralis-scanner-fogpotlas.html",
+    "same-day-cirkon-koronak-hidak.html",
+    "rolunk.html",
+    "munkaink.html",
+    "leplezett-zirkon-korona.html",
+    "lathatatlan-fogszabalyozas.html",
+    "insta.html",
+    "implantatumra-keszult.html",
+    "oxo-implant-service.html",
+    "esthetic-anatomikus-zirkon-fogpotlas.html"
+  ]
+}

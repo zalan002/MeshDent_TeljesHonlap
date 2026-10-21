@@ -1,0 +1,27 @@
+# Implantátum-ra készült | meshdent.hu
+
+Forrás: https://meshdent.hu/implantatumra-keszult/
+
+Gyűjtés: 2026-10-21; közvetített HTML, automatikusan kinyert szöveg.
+
+# Implantátumra készült
+
+# Solid Full Arch Zirconia
+
+implantátum
+
+Mivel az intraorális scannekre és az oxo texhnológiával meghatádozott scannekre történik a tervezés, így a végeredmény garantálható.
+
+A teljes íves implantátum-on vagy csiszolt csonkokon rögzülő fogak pótlásának protokollja egyszerű a MeshDent digitális fogtechnikában.
+
+Végleges pótlások előtt egy pmma-t vagy try-int készítünk, ahol a páciens és az orvos még gyártást megelőzően elmondhatja esetleges észrevételeit és módosítási igényeit mielőtt monolit cirkon-dioxidból elkészül.
+
+Tervezéshez használjuk a páciensek kiindulási állapotát, arcfotókat, és arcscanneket is.
+
+Kiváló esztétikával és tartóssága miatt a MeshDent Solid Zirconia ideális anyag az olyan teljes íves pótlásoknál is mint az All on 4 vagy All on 6 esetek.
+
+Az anyag kopásálló és még allergiás sem lehet rá a biokompatibilitásnak köszönhetően.
+
+Az eredmény így mikron pontos, kivételesen erős, élethű mosoly.
+
+További szolgáltatásaink

@@ -1,0 +1,23 @@
+[
+  {
+    "source_page": "https://meshdent.hu/oxo-implant-service/",
+    "embed_url": "https://player.vimeo.com/video/794036895?wmode=opaque&autoplay=1&loop=1&autopause=0&muted=1",
+    "provider": "Vimeo",
+    "status": "not_downloaded",
+    "observation": "Player and public config requests returned HTTP 404 on 2026-10-21; actual availability to the owner unverified"
+  },
+  {
+    "source_page": "https://meshdent.hu/partnereink/",
+    "embed_url": "https://www.youtube.com/embed/0qVwS2vZnl8?wmode=opaque&rel=0&enablejsapi=1",
+    "provider": "YouTube",
+    "status": "not_downloaded",
+    "observation": "oEmbed metadata request blocked by network proxy: tunnel HTTP 403; video availability unverified"
+  },
+  {
+    "source_page": "https://meshdent.hu/partnereink/",
+    "embed_url": "https://www.youtube.com/embed/3RmRWheYLAM?wmode=opaque&rel=0&enablejsapi=1",
+    "provider": "YouTube",
+    "status": "not_downloaded",
+    "observation": "oEmbed metadata request blocked by network proxy: tunnel HTTP 403; video availability unverified"
+  }
+]

@@ -1,0 +1,13 @@
+# Source media is included for the complete, reproducible website handoff.
+# Network response dumps and duplicate archive packages remain local.
+research/*/raw/
+*.zip
+!artifacts/MeshDent-honlapterv-2026-10-21-v3.zip
+artifacts/*
+!artifacts/MeshDent-honlapterv-2026-10-21-v3.zip
+!artifacts/MeshDent-honlapterv-2026-10-21-v3.zip.sha256
+.env*
+__pycache__/
+dist/
+.vercel/
+node_modules/

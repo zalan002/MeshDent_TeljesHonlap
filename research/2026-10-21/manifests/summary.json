@@ -1,0 +1,49 @@
+{
+  "collected_on": "2026-10-21",
+  "timezone": "Europe/Budapest",
+  "website_pages": 13,
+  "website_media_attachments": 84,
+  "website_original_raster_dimensions_preserved": 82,
+  "website_svg_rasterized": 2,
+  "repo_media_source_paths": 78,
+  "repo_media_unique": 49,
+  "instagram_posts_catalogued": 168,
+  "instagram_photo_posts_saved": 167,
+  "instagram_photos": 182,
+  "instagram_reel_covers": 1,
+  "instagram_videos_downloaded": 0,
+  "instagram_videos_missing": 1,
+  "instagram_profile_images": 1,
+  "instagram_imported_image_files": 183,
+  "catalog_entries": 317,
+  "unique_media_sha256": 316,
+  "media_bytes": 72737106,
+  "types": {
+    "image": 313,
+    "document": 3,
+    "video": 1
+  },
+  "categories": {
+    "Háttér / stock jellegű kép": 13,
+    "OXO klinikai referencia": 9,
+    "Partnerlogó": 17,
+    "OXO technológia": 9,
+    "MeshDent / OXO arculat": 4,
+    "Ikon / egyéb arculati elem": 14,
+    "Fogtechnikai referenciamunka": 8,
+    "Szolgáltatásillusztráció": 10,
+    "Freedom Air": 49,
+    "Instagram profil": 1,
+    "Instagram bejegyzés": 155,
+    "Instagram galériakép": 27,
+    "Instagram Reels-borító": 1
+  },
+  "source_commit": "bb4a61168b81b97bf99d0fc3889c2dacbede555c",
+  "limitations": [
+    "Website HTML obtained through Jina Reader after origin TLS certificate error.",
+    "Website images are proxy-reencoded copies; original bytes and original SVG vectors not archived.",
+    "Instagram images and metadata imported from a supplied archive; one full reel video missing; live completeness not independently rechecked.",
+    "Embedded Vimeo player returned 404; YouTube metadata requests blocked by network proxy.",
+    "No browser visual regression, production form submissions or analytics account validation performed."
+  ]
+}

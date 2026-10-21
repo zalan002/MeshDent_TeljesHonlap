@@ -1,0 +1,47 @@
+{
+  "collected_at": "2026-10-21",
+  "website_direct": {
+    "status": "TLS error through proxy",
+    "http_status": 503,
+    "error": "CERTIFICATE_VERIFY_FAILED"
+  },
+  "website_mediated": {
+    "status": "saved",
+    "reader": "https://r.jina.ai/",
+    "images": "https://images.weserv.nl/",
+    "wp_pages": 13,
+    "wp_media": 84,
+    "wp_posts": 0
+  },
+  "instagram": {
+    "public_profile": "saved",
+    "posts": "user archive imported",
+    "http_status": 401,
+    "require_login": true,
+    "initial_direct_access": {
+      "http_status": 401,
+      "require_login": true
+    },
+    "posts_catalogued": 168,
+    "image_files": 183,
+    "videos_missing": 1
+  },
+  "github": {
+    "Meshdent": {
+      "commit": "bb4a61168b81b97bf99d0fc3889c2dacbede555c",
+      "local_matches_remote_main": true
+    },
+    "MeshDent_TeljesHonlap": {
+      "initial_state": "README only",
+      "initial_visibility": "public"
+    }
+  },
+  "sitemap": {
+    "declared": [
+      "https://meshdent.hu/sitemap.xml",
+      "https://meshdent.hu/sitemap.rss"
+    ],
+    "status": "Reader transformed XML and did not preserve a reliable URL list; coverage based on REST pages and page links"
+  },
+  "submission_testing": "not_performed"
+}

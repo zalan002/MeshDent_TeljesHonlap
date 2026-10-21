@@ -1,0 +1,14 @@
+MeshDent Instagram-gyűjtemény – 2026-10-21
+
+168 bejegyzés: 167 fotós bejegyzés (köztük 12 galéria), 1 Reels.
+182 fotó + 1 Reels-borítókép. A Reels videófájlja nem tölthető le; lásd NEM_LETOLTHETO.txt.
+
+forrasjegyzek.html: képes, kereshető jegyzék, internet nélkül is megnyitható.
+forrasjegyzek.json: géppel feldolgozható bejegyzés- és fájljegyzék, méretek, SHA-256 ellenőrzőösszegek, teljes szövegek és forráslinkek.
+media/: dátum és bejegyzésazonosító szerinti mappák, képek és kepalairas.txt.
+
+Az Instagram által a böngészőnek kiszolgált képfájlokat mentettük, átméretezés nélkül. A jegyzék bélyegképei csak előnézetek.
+A dátumok UTC szerinti pontos közzétételi időpontok, nem a hozzászólások vagy szerkesztések dátumai.
+A bejegyzések képaláírásai változtatás nélkül szerepelnek; a csomag más felhasználók hozzászólásait nem tartalmazza.
+A forrásul szolgáló ideiglenes média-URL-ek lejárhatnak; a bejegyzéslinkek és helyi fájlok szolgálnak tartós hivatkozásként.
+A gyűjtés az elérhető saját bejegyzésekre és a Reels-fülre terjedt ki, nem történetekre vagy mások megjelölt/továbbosztott tartalmaira.

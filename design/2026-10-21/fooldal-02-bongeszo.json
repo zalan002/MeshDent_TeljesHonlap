@@ -1,0 +1,39 @@
+{
+  "desktop": {
+    "ready": "complete",
+    "title": "Minden részlet számít. | MeshDent · látványterv",
+    "canvas": 672,
+    "overflow": false
+  },
+  "exceptions": [],
+  "pause_state": true,
+  "canvas_stays_paused": true,
+  "photo_switch": true,
+  "process_step": true,
+  "service_preview": true,
+  "mobile_menu": true,
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "reduced_motion": true,
+  "standalone_canvas": true,
+  "standalone_mobile": true,
+  "standalone_navigation": true,
+  "subpage_scope": true,
+  "result": "PASS"
+}

@@ -1,0 +1,20 @@
+MESHDENT — TELJES HONLAPTERV / FŐOLDALKONCEPCIÓ 02 / FOGÍV 03, 2026.10.21.
+
+Nyissa meg a MeshDent-latvanyterv.html fájlt böngészőben.
+A képek, stílusok és programkód be vannak ágyazva; nincs telepítés.
+Az oldalválasztóval és az Asztali / Mobil gombokkal járható be a terv.
+A fogív alatt Térbeli, Elölnézet és Rágófelszín nézet választható.
+
+TELJES-HONLAPTERV.md: teljes szöveges és technikai terv.
+FOOLDAL-02.md: a főoldal új megjelenése, grafikája és mozgása.
+oldalterv.csv: útvonalak, keresési célok és metaadatok.
+kepvalogatas.json: képek eredete és javasolt használata.
+ELLENORZES.md, ellenorzes.json: ellenőrzések és korlátok.
+fooldal-02-bongeszo.json: az eredeti 02-es főoldal böngészős ellenőrzése.
+fogiv-03-bongeszo.json, fogiv-03-geometria.json: a frissített fogív ellenőrzései.
+prototype/: a többfájlos változat, a mappát együtt kell megtartani.
+
+A ZIP tervezési átadás, nem éles Next.js alkalmazás. Az űrlap nem küld adatot.
+A Freedom Air a meglévő oldal átvételi tervével szerepel.
+A forrásarchívumra mutató projektlinkek a külön teljes kutatási csomagban érhetők el.
+A Python-generátorok újrafuttatásához az eredeti projekt és forrásarchívum szükséges.

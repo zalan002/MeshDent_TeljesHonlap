@@ -1,0 +1,63 @@
+{
+  "desktop": {
+    "ready": "complete",
+    "title": "Minden részlet számít. | MeshDent · látványterv",
+    "canvas": 672,
+    "overflow": false
+  },
+  "exceptions": [],
+  "benchmark": {
+    "msPerFrame": 16.1,
+    "vertices": 9412,
+    "faces": 9536,
+    "toothCount": 16
+  },
+  "cameraViews": [
+    {
+      "angle": "spatial",
+      "selected": true
+    },
+    {
+      "angle": "front",
+      "selected": true
+    },
+    {
+      "angle": "occlusal",
+      "selected": true
+    }
+  ],
+  "distinctCameraViews": true,
+  "pause_state": true,
+  "canvas_stays_paused": true,
+  "photo_switch": true,
+  "process_step": true,
+  "service_preview": true,
+  "mobile_menu": true,
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "reduced_motion": true,
+  "standalone_canvas": true,
+  "standalone_mobile": true,
+  "standalone_navigation": true,
+  "subpage_scope": true,
+  "reduced_motion_initial_load": true,
+  "keyboard_camera": true,
+  "no_canvas_fallback": true,
+  "result": "PASS"
+}

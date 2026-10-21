@@ -1,0 +1,103 @@
+                        CONFIDENTIAL
+
+
+
+
+FREEDOM Air
+Accuracy Test Report
+
+
+2025.12   DOF PM 1     © 2025 DOF Inc. All rights reserved.
+    Index
+1. Scan Data Accuracy Test
+2. PIM Data Accuracy Test
+1. Scan Data Accuracy Test
+
+
+
+
+  1. Test Procedure
+     1.1 The test was conducted using a single, a quadrant, and a full-arch stone model.
+     1.2 Each model was scanned 10 times by the same operator under recommended scanning conditions and strategy.
+     1.3 Reference data was obtained using our lab scanner FREEDOM X5, and trueness was measured using the Gom Inspector software.
+     1.4 The average value of the trueness data from the 10 scans was calculated.
+
+  2. Conclusion
+     2.1 The average trueness values were measured as follows:
+        Single : 12 μm
+        Quadrant 18 μm
+        Full-arch 21 μm
+     2.2 The color maps generated using Gom Inspector have been attached in the following pages.
+
+
+© 2025 DOF Inc. All rights reserved.                                                                                                 3
+1. Scan Data Accuracy Test
+
+
+
+
+                                         Single        Quadrant       Full Arch
+                                       Overall Avg.   Overall Avg.   Overall Avg.
+                                         12 μm          18 μm          21 μm
+© 2025 DOF Inc. All rights reserved.                                                4
+  2. PIM Data Accuracy Test
+
+Distance between scan bodies                                                                      Angle between scan bodies
+
+
+
+
+  1.    Test Procedure
+        1. 1 Fasten the PIM scan bodies onto a single stone model according to the numbers of lab analog and perform 5 repeated scans.
+        1.2 During the 5 scans, no positional changes of the attached scan bodies.
+        1.3 Record the linear and angular differences between the two scan bodies for each test run, then calculate the average.
+        1.4 Using FREEDOM UHD, obtain the reference data and measure the distance and angle between each scan bodies.
+        1.5 Compare the numerical values (means and per-iteration values) of the PIM data with the reference data. The resulting values correspond to the table above.
+        1.6 The acceptable tolerance ranges for linear error (mean ± SD linear discrepancies) and angular error (mean ± SD angular discrepancies) are ±30 μm and ±0.34°, respectively.
+
+  2. Conclusion
+        2.1 When converting the linear error in the above table to micrometers, the Distance average result is 13.4 μm, the Angle average result is 0.12°
+        2.2 All angular errors are confirmed to fall within the acceptable tolerance range. The acceptable tolerance was established based on the findings reported in the attached study.
+        2.3 Attached Study : Accuracy of complete arch implant scans recorded by using intraoral and extraoral photogrammetry systems.
+        2.4 Using the obtained data, metal bar milling was fabricated with DOF CRAFT PLUS, and the trial fitting photos have been attached in the following pages
+   © 2025 DOF Inc. All rights reserved.                                                                                                                                                      5
+2. PIM Data Accuracy Test
+
+
+
+
+                                       All on 6 Plaster Test Model   All on 6 Metal Milled Bar
+
+
+
+
+© 2025 DOF Inc. All rights reserved.                                                             6
+2. PIM Data Accuracy Test
+
+                                                                            LEFT
+
+
+
+
+                                   Trial Fitting Standard         Results
+
+                                                                            RIGHT
+      The entire bar structure seated perfectly on all implants
+                                                                  PASS
+                        without any distortion
+
+
+         The screw holes aligned precisely with the implants,
+                                                                  PASS
+                     allowing smooth insertion
+
+
+       When a screw was tightened on one side, the opposite                 FRONT
+                                                                  PASS
+                     side did not lift or gap
+
+
+
+
+© 2025 DOF Inc. All rights reserved.                                                7
+

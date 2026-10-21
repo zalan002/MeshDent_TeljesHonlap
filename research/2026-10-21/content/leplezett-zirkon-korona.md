@@ -1,0 +1,17 @@
+# Leplezett zirkon korona | meshdent.hu
+
+Forrás: https://meshdent.hu/leplezett-zirkon-korona/
+
+Gyűjtés: 2026-10-21; közvetített HTML, automatikusan kinyert szöveg.
+
+# Leplezett zirkon koronák
+
+A leplezett cirkónium korona tökéletes alternatívája a hagyományos fémkerámia restaurációknak a nagyon magas esztétikai elvárások esetében.
+
+Ezeket a munkákat is szoftveresen tervezzük, csupán az anatómikus formák után a leplezésnek mérten visszavágunk a designból.
+
+A pontosságot és széli záródást mikroszkópok alatt ellenőrízzük, ezután GC Initial porcelán leplezést kapnak.
+
+Mester keramikusaink a végleges koronákat bármilyen kívánt árnyalattal megépítik, így a végeredmények tökéletesen illeszkednek a páciens természetes fogazatához.
+
+További szolgáltatásaink
