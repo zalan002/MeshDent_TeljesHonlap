@@ -272,4 +272,4 @@ Elkészült: teljes információs és vizuális terv, oldalankénti keresési c�
 - [CRM és mérési forrásaudit](../../research/2026-10-21/TECHNIKAI-ES-MERESI-TERV.md)
 - [Ellenőrizendő adatok](../../research/2026-10-21/ELLENORIZENDO-ADATOK.md)
 - [Instagram-import](../../research/2026-10-21/INSTAGRAM-IMPORT.md)
-- [Meglévő Freedom Air forráscommit](https://github.com/zalan002/Meshdent/tree/bb4a61168b81b97bf99d0fc3889c2dacbede555c)
+- [Meglévő Freedom Air oldal](https://meshdent.vercel.app/)

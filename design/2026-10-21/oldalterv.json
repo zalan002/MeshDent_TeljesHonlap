@@ -171,14 +171,14 @@
   {
     "route": "/FreedomaAir",
     "prototype": "FreedomaAir.html",
-    "h1": "Freedom Air — meglévő landing",
+    "h1": "Freedom Air",
     "title": "Freedom Air szkenner és fotogrammetria | MeshDent",
-    "meta_description": "Freedom Air intraorális szkennelés és fotogrammetria a MeshDenttől. A meglévő termékoldal megőrzött tartalommal, bemutató- és kihelyezési folyamattal.",
-    "search_intent": "Freedom Air szkenner; intraorális fotogrammetria",
-    "primary_cta": "Meglévő hétlépéses űrlap",
+    "meta_description": "A https://meshdent.vercel.app/ oldal kerül át ide egy az egyben.",
+    "search_intent": "Freedom Air",
+    "primary_cta": "Meglévő oldal megnyitása",
     "index_production_proposal": "index, follow",
     "canonical": "https://meshdent.hu/FreedomaAir",
-    "structured_data_proposal": "WebPage; Product, igazolt adatokkal",
-    "open_content_item": "Változatlan oldalátvétel; külön műszaki adat- és PDF-ellenőrzés."
+    "structured_data_proposal": "WebPage",
+    "open_content_item": "Változatlan oldalátvétel."
   }
 ]
