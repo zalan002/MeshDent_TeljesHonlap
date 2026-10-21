@@ -7,7 +7,7 @@ A MeshDent teljes honlapjának megújítási projektje.
 - [Új főoldal és bejárható aloldalak](https://meshdentteljeshonlap.vercel.app/)
 - [Teljes látványterv oldalválasztóval és mobilnézettel](https://meshdentteljeshonlap.vercel.app/latvanyterv)
 - [Oldaljegyzék és részletes terv](https://meshdentteljeshonlap.vercel.app/terv)
-- [Letölthető tervcsomag](artifacts/MeshDent-honlapterv-2026-10-21-v3.zip)
+- [Korábbi, 03-as tervcsomag](artifacts/MeshDent-honlapterv-2026-10-21-v3.zip)
 
 A Vercel-projekt neve `meshdent_teljeshonlap`, a telepítési ág `main`. A `vercel.json` a `node scripts/build-preview.mjs` parancsot futtatja, és kizárólag a `dist/` mappát publikálja. A buildhez nincs külső csomag vagy titkos környezeti változó.
 

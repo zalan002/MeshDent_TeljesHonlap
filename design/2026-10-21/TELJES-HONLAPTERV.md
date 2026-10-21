@@ -1,14 +1,14 @@
 # MeshDent — a teljes új honlap terve
 
-**Verzió:** 2.0 — átdolgozott főoldal · **Dátum:** 2026. október 21. · **Állapot:** megvalósításra előkészített terv és helyi látványprototípus.
+**Verzió:** 2.1 — digitális fogtechnika Budapesten · **Dátum:** 2026. október 21. · **Állapot:** megvalósításra előkészített terv és helyi látványprototípus.
 
-**Főoldal, 02-es koncepció:** az új vizuális irányt és mozgást a [Főoldalkoncepció 02](FOOLDAL-02.md) rögzíti. A főoldal új címe „Minden részlet számít.”, nyitóeleme interaktív fogív-illusztráció, valódi referenciára váltható nézettel. Ez a kiegészítés felülírja az alábbi eredeti vizuális főoldalleírásokat. Az aloldalak elfogadott szerkezete, a CRM és a mérés terve változatlan.
+**Főoldal, 04-es finomítás:** az új vizuális irányt és mozgást a [Frissített főoldalkoncepció](FOOLDAL-02.md) rögzíti. A főoldal új címe „Digitális fogtechnika Budapesten.”, nyitóeleme interaktív fogív-illusztráció, valódi referenciára váltható nézettel. Ez a kiegészítés felülírja az alábbi eredeti vizuális főoldalleírásokat. Az aloldalak elfogadott szerkezete, a CRM és a mérés terve változatlan.
 
 [Kattintható látványterv](prototype/index.html) · [Oldaljegyzék és tervezői megjegyzések](prototype/terv.html) · [Oldalankénti SEO- és tartalomterv](oldalterv.csv) · [Képválogatás és eredet](kepvalogatas.json)
 
 ## 1. Az új honlap alapgondolata
 
-**Minden részlet számít.** Digitálisan megtervezve. Egyedire formálva.
+**Digitális fogtechnika Budapesten.** Fogpótlások digitális tervezése és készítése fogorvosoknak, rendelőknek.
 
 A MeshDent honlapja egy budapesti digitális fogtechnikai labor szakmai bemutatkozása. A látogató először megérti, mivel foglalkozik a labor, majd megismeri az együttműködés folyamatát, a szolgáltatásokat és a tényleges munkákat. Innen egyértelmű út vezet a szakmai egyeztetéshez.
 
@@ -36,7 +36,7 @@ Az alap hangnem következetesen magázó, rövid és szakmai. A páciensoldal k�
 
 | Útvonal | Oldal szerepe / főcíme | Elsődleges művelet | Indexelés |
 |---|---|---|---|
-| `/` | Minden részlet számít. | Dolgozzunk együtt | Igen |
+| `/` | Digitális fogtechnika Budapesten. | Kapcsolatfelvétel | Igen |
 | `/rolunk/` | Digitális szemlélet. Személyes együttműködés. | Kapcsolat a laborral | Igen |
 | `/same-day-cirkon-koronak-hidak/` | SAME DAY cirkon koronák és hidak | Egyeztessünk a munkáról | Igen |
 | `/leplezett-zirkon-korona/` | Leplezett zirkon koronák | Szakmai egyeztetés | Igen |
@@ -84,13 +84,13 @@ A meglévő logót használjuk; a prototípusban 146 px körüli megjelenítési
 
 | Sorrend | Tartalom | Elrendezés és interakció | Forrás |
 |---|---|---|---|
-| 1 | **Digitális fogtechnika. Természetes részletek.** Alatta: „Budapesti digitális fogtechnikai labor fogorvosoknak és rendelőknek. Intraorális scan fájlokra épülő tervezés, gyártás és személyes együttműködés.” | Két hasáb: balra cím és 2 CTA, jobbra nagy saját referenciakép. Mobilon szöveg, gombok, kép. | Régi főoldali bemutatkozás + Instagram |
-| 2 | A digitális lenyomattól a kész fogpótlásig | Hat számozott lépés; asztali két sor, mobil függőleges lista. | Régi hatlépéses folyamat, logikus sorrendbe rendezve |
-| 3 | Miért érdemes digitálisan együtt dolgozni? | Hat rövid előny, két hasáb; az egyes előnyök mögött rövid magyarázat. | Régi digitális előnyök |
-| 4 | Szolgáltatásaink | Hat nagy, képes szolgáltatáslink. A képek és címsorok egyaránt kattinthatók. | Hat jelenlegi szolgáltatás |
+| 1 | **Digitális fogtechnika Budapesten.** Alatta: „Fogpótlások digitális tervezése és készítése fogorvosoknak, rendelőknek.” | Két hasáb: balra cím, Kapcsolatfelvétel és Szolgáltatásaink link; jobbra interaktív fogív, saját referenciára váltható nézettel. Mobilon egymás alatti elrendezés. | Régi főoldali bemutatkozás + Instagram |
+| 2 | Így dolgozunk. | Hat számozott, lenyitható lépés rövid leírásokkal. | Régi hatlépéses folyamat, logikus sorrendbe rendezve |
+| 3 | Digitális együttműködés. | Három rövid előny: egyszerű adatátadás, egyeztethető tervek, közvetlen kapcsolat. | Régi digitális előnyök |
+| 4 | Fogpótlások és digitális megoldások. | Hat közvetlen szolgáltatáslink, váltakozó képelőnézettel. | Hat jelenlegi szolgáltatás |
 | 5 | Technológia a rendelő és a labor között | Két külön modul: OXO szolgáltatás és Freedom Air terméklanding. A kettő külön CTA-val és leírással szerepel. | OXO oldal + meglévő landing |
-| 6 | Válogatás a munkáinkból | Három saját referencia, képnagyítás és link a Munkáink oldalra. | Ellenőrzött Instagram-képválogatás |
-| 7 | Beszéljünk a következő munkáról | Elérhetőségek + rövid űrlap; ügytípus előválasztható a szolgáltatásoldalról. | Régi kapcsolatblokk |
+| 6 | Munkáink. | Három saját referencia, képnagyítás és link a Munkáink oldalra. | Ellenőrzött Instagram-képválogatás |
+| 7 | Kapcsolat a laborral. | Elérhetőségek + rövid űrlap; ügytípus előválasztható a szolgáltatásoldalról. | Régi kapcsolatblokk |
 | 8 | Lábléc | Teljes szolgáltatáslista, cégcím, kapcsolattartók, Instagram, jogi és cookie-linkek. | Forrásadatok |
 
 **Hat lépés:** digitális lenyomat → ellenőrzés és továbbítás → CAD-tervezés → gyártás → egyedi kidolgozás → kiszállítás. A régi kinyert HTML oszlopsorrendje felcserélte az egyes lépéseket; a tartalom megmarad, a sorrend a munkafolyamatot követi.

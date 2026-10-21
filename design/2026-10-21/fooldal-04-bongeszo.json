@@ -1,0 +1,57 @@
+{
+  "scope": "local production build; responsive homepage and existing interactions",
+  "url": "local production build /",
+  "home": true,
+  "canvas": true,
+  "headline": true,
+  "layouts": [
+    {
+      "width": 320,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "48px"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "56px"
+    },
+    {
+      "width": 640,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "94px"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "52.6025px"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "72.585px"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "titleFits": true,
+      "headingSize": "94px"
+    }
+  ],
+  "responsive": true,
+  "camera": true,
+  "photo": true,
+  "navigation": true,
+  "viewer": true,
+  "viewer_headline": true,
+  "viewer_mobile": true,
+  "page_picker": true,
+  "mobile_overflow": false,
+  "mobile_menu": true,
+  "runtime_exceptions": [],
+  "result": "PASS"
+}

@@ -1,6 +1,6 @@
 # A honlapterv és a prototípus ellenőrzése
 
-Átadás: 2026. október 21. · Frissítve a 02-es főoldalkoncepció 03-as fogívgrafikájához.
+Átadás: 2026. október 21. · Frissítve a főoldal 04-es tartalmi finomításával; a fogívgrafika 03-as változata megmaradt.
 
 ## Használat
 
@@ -25,6 +25,10 @@ A `prototype/index.html` változat külön fájlokkal működik; ehhez a teljes 
 - A fogívgrafikán 16 zárt koronafelület, nyolc tükörszimmetrikus fogpár és 20 nézet-/képméret-kombináció ellenőrzött. A három új kameranézet külön és billentyűzetes aktiválással is ellenőrzött. A csökkentett mozgás induláskori állapota és a Canvas nélküli SVG-megjelenés böngészőben ellenőrzött.
 
 Az ellenőrzések gépi eredménye az `ellenorzes.json`, a főoldal böngészős eredménye a `fooldal-02-bongeszo.json`, a fogív frissített eredménye a `fogiv-03-bongeszo.json` és `fogiv-03-geometria.json` mellékletben található. Ez nem éles integrációs vagy akadálymentességi tanúsítás.
+
+## A 04-es főoldal ellenőrzése
+
+A `fooldal-04-bongeszo.json` a Vercelre készített helyi `dist` változat Chromium-ellenőrzését rögzíti. 320, 390, 640, 768, 1024 és 1440 px szélességen a főcím a saját hasábján belül marad, és nincs oldalszintű vízszintes túlcsordulás. Asztali és mobilképernyőn vizuálisan is ellenőrzött a főcím és a rövidebb tartalom. A fogív rágófelszíni nézete, a fotóváltás, az aloldalra navigálás, a mobilmenü és az önálló oldalválasztó működik; nincs JavaScript-futási kivétel.
 
 ## Tervezetten működő interakciók
 

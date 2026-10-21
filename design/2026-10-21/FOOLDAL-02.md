@@ -1,10 +1,10 @@
-# MeshDent — főoldalkoncepció 02
+# MeshDent — főoldalkoncepció, 04-es finomítás
 
-2026. október 21. · A visszajelzés alapján átdolgozott főoldal. Frissítve: 03-as, anatómiai részletekkel kialakított fogívgrafika.
+2026. október 21. · A visszajelzés alapján átdolgozott főoldal. Frissítve: 04-es, közérthetőbb főoldal; a 03-as fogívgrafikával.
 
 ## Vizuális gondolat
 
-**Minden részlet számít.** A digitális tervezés geometriája és az egyedileg kidolgozott fogpótlások karaktere adja az oldal látványát. Mélyzöld nyitófelület, világos zöld akcentus, nagy betűméret és váltakozó, magazinszerű kompozíciók.
+**Digitális fogtechnika Budapesten.** A főcímben a „Digitális fogtechnika” a legerősebb elem, alatta kisebb, zöld „Budapesten” helymegjelöléssel. Egyetlen rövid leírás mondja el, hogy a MeshDent fogorvosoknak és rendelőknek tervez és készít fogpótlásokat. A mélyzöld nyitófelület és az interaktív fogív után egyszerűbb címek, rövid leírások és egységesebb szakaszok következnek.
 
 Az új koncepció a főoldalra vonatkozik. Az elfogadott aloldalak szerkezete és tartalma megmaradt; az új szín-, forma- és tipográfiai elemek később erre az alapra vezethetők át. A `/FreedomaAir` továbbra is a meglévő landing változatlan átvételének külön terve.
 
@@ -12,16 +12,15 @@ Az új koncepció a főoldalra vonatkozik. Az elfogadott aloldalak szerkezete é
 
 | Rész | Új megoldás |
 |---|---|
-| Nyitás | Nagyméretű, háromsoros asztali főcím; dőlt, talpas „részlet” szó; mobilon tömörebb elrendezés |
+| Nyitás | „Digitális fogtechnika Budapesten.”; a hasáb szélességéhez igazodó főcím, Kapcsolatfelvétel és Szolgáltatásaink hivatkozás |
 | Fő grafika | Egyedileg programozott felső fogív 16 foggal; árnyalt koronák, finom felületi háló és három választható nézet |
 | Valódi munka | A „Saját munkánk” gomb a grafikát a MeshDent meglévő, változatlan referenciafotójára váltja |
-| Átvezetés | Nagyméretű „ADAT · FORMA · KARAKTER” tipográfiai sáv |
 | Munkafolyamat | Hat lenyitható lépés, változó sorszámmal és digitális síkokat idéző grafikával |
-| Előnyök | Nagyméretű állítás és visszafogottan tagolt szakmai előnyök |
+| Előnyök | Három rövid pont: egyszerű adatátadás, egyeztethető tervek, közvetlen kapcsolat |
 | Szolgáltatások | Hat tipográfiai sor; egérrel és billentyűzetes fókusszal változó képelőnézet |
 | Technológia | Külön OXO- és Freedom Air-kompozíció, nagy háttérfeliratokkal és eszközfotókkal |
-| Referenciák | Aszimmetrikus galéria: egy nagy, íves képfelület és két kisebb részlet |
-| Kapcsolat | Világos zöld zárófelület, hangsúlyos cím és a meglévő próbaűrlap |
+| Referenciák | Három egyenrangú referencia; mobilon egymás alatti, nagyítható képek |
+| Kapcsolat | „Kapcsolat a laborral.” cím, közvetlen elérhetőségek és a meglévő próbaűrlap |
 
 ## A grafika jelentése
 
@@ -49,7 +48,7 @@ A szolgáltatások képelőnézete mobilon is látható. A szolgáltatáscímek 
 
 Az elfogadott aloldalakhoz a mélyzöld/zöld felületek, a dőlt szavakkal tagolt címsorok, az íves képkivágások és a vonalas ikonok vihetők tovább. Az animált nyitóelem a főoldal saját eleme maradjon. A hosszabb szakmai oldalakon az olvashatóság és a szolgáltatásspecifikus kép fontosabb, mint a folyamatos mozgás.
 
-Az üzleti állítások, CRM-mezők, adatkezelési és mérési követelmények nem változtak. Ez továbbra is helyi látványprototípus, éles beküldés és analitika nélkül.
+Az üzleti állítások, CRM-mezők, adatkezelési és mérési követelmények nem változtak. Ez továbbra is látványprototípus, éles beküldés és analitika nélkül. A Vercel-előnézet és az önálló HTML ugyanazt a főoldalt mutatja.
 
 
 ## A fogív részletes átdolgozása — 03
