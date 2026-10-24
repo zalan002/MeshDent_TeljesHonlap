@@ -1,0 +1,125 @@
+{
+  "layout": [
+    {
+      "width": 320,
+      "scroll": 305,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "width": 390,
+      "scroll": 375,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "width": 640,
+      "scroll": 625,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "width": 768,
+      "scroll": 753,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Digitális fogtechnika Budapesten."
+    },
+    {
+      "route": "FreedomaAir",
+      "width": 320,
+      "scroll": 305
+    },
+    {
+      "route": "FreedomaAir",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "FreedomaAir",
+      "width": 768,
+      "scroll": 753
+    },
+    {
+      "route": "FreedomaAir",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "route": "/rolunk",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/same-day-cirkon-koronak-hidak",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/leplezett-zirkon-korona",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/esthetic-anatomikus-zirkon-fogpotlas",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/lathatatlan-fogszabalyozas",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/implantatumra-keszult",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/partnereink",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/extraoralis-scanner-fogpotlas",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/adatkezeles",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/sutik",
+      "width": 390,
+      "scroll": 375
+    },
+    {
+      "route": "/impresszum",
+      "width": 390,
+      "scroll": 375
+    }
+  ],
+  "story": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "crm": [
+    "general success and duplicate click",
+    "validation has no success event",
+    "verified lead event without PII",
+    "Freedom partial and final with local thank-you route"
+  ],
+  "errors": [],
+  "missing": [],
+  "consentWithdrawal": true,
+  "scope": "Production build in Chromium; external CRM and Google requests mocked; no real leads submitted."
+}

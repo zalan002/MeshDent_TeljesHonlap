@@ -1,0 +1,107 @@
+{
+  "logo": {
+    "src": "assets/logo.png",
+    "alt": "MeshDent digitális fogtechnika",
+    "width": 293,
+    "height": 104,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/meshdent-logo.png"
+  },
+  "full-arch": {
+    "src": "assets/full-arch.jpg",
+    "alt": "Teljes íves fogpótlás látható implantátumkapcsolatokkal, fekete háttéren",
+    "width": 1400,
+    "height": 960,
+    "source": "https://www.instagram.com/meshdent_lab_budapest/p/DUi3W8Fj0lx/"
+  },
+  "detail": {
+    "src": "assets/detail.jpg",
+    "alt": "A MeshDent fogpótlásának elülső fogai és ínyrésze közelről",
+    "width": 1170,
+    "height": 1114,
+    "source": "https://www.instagram.com/meshdent_lab_budapest/p/DZIsczGGhTb/"
+  },
+  "esthetic": {
+    "src": "assets/esthetic.jpg",
+    "alt": "Anatómikus fogpótlás világos modellen, részletes fogfelszínekkel",
+    "width": 1343,
+    "height": 978,
+    "source": "https://www.instagram.com/meshdent_lab_budapest/p/DXsCFGZkazP/"
+  },
+  "dentures": {
+    "src": "assets/dentures.jpg",
+    "alt": "Felső és alsó teljes fogsor közeli tárgyfotón",
+    "width": 1440,
+    "height": 960,
+    "source": "https://www.instagram.com/meshdent_lab_budapest/p/DRsIZKdjHTl/"
+  },
+  "freedom": {
+    "src": "assets/freedom.jpg",
+    "alt": "Két intraorális szkenner és tartozékok világos háttéren",
+    "width": 664,
+    "height": 664,
+    "source": "https://www.instagram.com/meshdent_lab_budapest/p/DYm71gSjRSc/"
+  },
+  "same-day": {
+    "src": "assets/same-day.jpg",
+    "alt": "A jelenlegi SAME DAY korona- és hídoldal fogtechnikai illusztrációja",
+    "width": 900,
+    "height": 480,
+    "source": "https://meshdent.hu/wp-content/uploads/2021/09/service8.jpeg"
+  },
+  "layered": {
+    "src": "assets/layered.jpg",
+    "alt": "A jelenlegi leplezett zirkon oldal fogpótlás-illusztrációja",
+    "width": 900,
+    "height": 480,
+    "source": "https://meshdent.hu/wp-content/uploads/2021/09/service9.jpeg"
+  },
+  "aligner": {
+    "src": "assets/aligner.jpg",
+    "alt": "Átlátszó fogszabályozó sín a jelenlegi szolgáltatásoldalról",
+    "width": 926,
+    "height": 480,
+    "source": "https://meshdent.hu/wp-content/uploads/2021/09/service6.jpeg"
+  },
+  "nobel": {
+    "src": "assets/nobel.png",
+    "alt": "Nobel Biocare",
+    "width": 203,
+    "height": 33,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/nobel_biocare.svg"
+  },
+  "medit": {
+    "src": "assets/medit.webp",
+    "alt": "Medit",
+    "width": 364,
+    "height": 120,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/medit-logo.webp"
+  },
+  "medentika": {
+    "src": "assets/medentika.png",
+    "alt": "Medentika",
+    "width": 476,
+    "height": 117,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/medentika-partner-logo.svg"
+  },
+  "exocad": {
+    "src": "assets/exocad.jpg",
+    "alt": "exocad",
+    "width": 640,
+    "height": 177,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/exocad-logo.jpg"
+  },
+  "dentaltechnika": {
+    "src": "assets/dentaltechnika.jpg",
+    "alt": "Dentaltechnika",
+    "width": 656,
+    "height": 403,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/dentaltechnika-logo.jpg"
+  },
+  "3shape": {
+    "src": "assets/3shape.png",
+    "alt": "3Shape",
+    "width": 900,
+    "height": 500,
+    "source": "https://meshdent.hu/wp-content/uploads/2023/12/3shape-logo.png"
+  }
+}

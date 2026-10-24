@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "index",
+    "route": "/",
+    "title": "Digitális fogtechnika Budapesten",
+    "noindex": false
+  },
+  {
+    "slug": "same-day-cirkon-koronak-hidak",
+    "route": "/same-day-cirkon-koronak-hidak",
+    "title": "SAME DAY cirkon koronák és hidak",
+    "noindex": false
+  },
+  {
+    "slug": "leplezett-zirkon-korona",
+    "route": "/leplezett-zirkon-korona",
+    "title": "Leplezett zirkon koronák",
+    "noindex": false
+  },
+  {
+    "slug": "esthetic-anatomikus-zirkon-fogpotlas",
+    "route": "/esthetic-anatomikus-zirkon-fogpotlas",
+    "title": "ESTHETIC anatómikus zirkon fogpótlás",
+    "noindex": false
+  },
+  {
+    "slug": "lathatatlan-fogszabalyozas",
+    "route": "/lathatatlan-fogszabalyozas",
+    "title": "Láthatatlan fogszabályozás",
+    "noindex": false
+  },
+  {
+    "slug": "implantatumra-keszult",
+    "route": "/implantatumra-keszult",
+    "title": "Implantátumra készült fogpótlások",
+    "noindex": false
+  },
+  {
+    "slug": "rolunk",
+    "route": "/rolunk",
+    "title": "Digitális szemlélet. Személyes együttműködés.",
+    "noindex": false
+  },
+  {
+    "slug": "munkaink",
+    "route": "/munkaink",
+    "title": "Fogtechnikai referenciák és munkáink",
+    "noindex": false
+  },
+  {
+    "slug": "partnereink",
+    "route": "/partnereink",
+    "title": "Partnereink",
+    "noindex": false
+  },
+  {
+    "slug": "kapcsolat",
+    "route": "/kapcsolat",
+    "title": "Kapcsolat – fogtechnikai labor Budapesten",
+    "noindex": false
+  },
+  {
+    "slug": "extraoralis-scanner-fogpotlas",
+    "route": "/extraoralis-scanner-fogpotlas",
+    "title": "Digitális lenyomatvétel a fogpótlásához",
+    "noindex": false
+  },
+  {
+    "slug": "insta",
+    "route": "/insta",
+    "title": "A labor munkái képekben",
+    "noindex": true
+  },
+  {
+    "slug": "FreedomaAir",
+    "route": "/FreedomaAir",
+    "title": "DOF Freedom Air szkenner és fotogrammetria",
+    "noindex": false,
+    "externalExport": true
+  },
+  {
+    "slug": "adatkezeles",
+    "route": "/adatkezeles",
+    "title": "Adatkezelési tájékoztatás",
+    "noindex": true
+  },
+  {
+    "slug": "sutik",
+    "route": "/sutik",
+    "title": "Sütikezelés",
+    "noindex": true
+  },
+  {
+    "slug": "impresszum",
+    "route": "/impresszum",
+    "title": "Impresszum",
+    "noindex": true
+  },
+  {
+    "slug": "404",
+    "route": "/404",
+    "title": "Ez az oldal nem található",
+    "noindex": true
+  }
+]

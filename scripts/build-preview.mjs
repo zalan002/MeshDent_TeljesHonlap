@@ -1,41 +1,47 @@
-// Publish the reviewed static design. No dependencies or runtime secrets required.
+// Publish the completed site. The reviewed source designs remain in the repository.
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const design = path.join(root, 'design/2026-10-21');
+const source = path.join(root, 'site');
 const output = path.join(root, 'dist');
-const prototype = path.join(design, 'prototype');
-const standalone = fs.readFileSync(path.join(design, 'MeshDent-latvanyterv.html'), 'utf8');
-const data = JSON.parse(standalone.match(/<script id="design-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-if (!data.app.includes('MeshDentArch') || !data.pages['index.html'].body.includes('data-arch-angle="occlusal"')) {
-  throw new Error('The standalone preview is stale. Run build_standalone.py before publishing.');
-}
+const origin = new URL(process.env.SITE_URL || 'https://meshdentteljeshonlap.vercel.app').origin;
+if (!origin.startsWith('https://')) throw new Error('SITE_URL must use HTTPS.');
+const indexable = process.env.SITE_INDEXABLE === 'true' && !new URL(origin).hostname.endsWith('.vercel.app');
+const integration = JSON.parse(fs.readFileSync(path.join(source, 'content/integrations.json'), 'utf8'));
+const ga4Id = process.env.PUBLIC_GA4_ID ?? integration.ga4Id;
+const adsId = process.env.PUBLIC_ADS_ID || integration.adsId;
+const adsLabel = process.env.PUBLIC_ADS_LABEL || integration.adsLabel;
+if (ga4Id && !/^G-[A-Z0-9]+$/.test(ga4Id)) throw new Error('Invalid GA4 ID.');
+if (adsId && !/^AW-\d+$/.test(adsId)) throw new Error('Invalid Ads ID.');
+if (adsLabel && !/^[a-zA-Z0-9_-]+$/.test(adsLabel)) throw new Error('Invalid Ads conversion label.');
+if (Boolean(adsId) !== Boolean(adsLabel)) throw new Error('Ads ID and conversion label must be configured together.');
+const contactEnabled = true;
 fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output, { recursive: true });
-fs.cpSync(prototype, output, { recursive: true });
-
-// Root-relative, extensionless links match Vercel cleanUrls and preserve query/hash state.
-let pages = 0;
-for (const entry of fs.readdirSync(output)) {
-  if (!entry.endsWith('.html')) continue;
-  const file = path.join(output, entry);
-  const source = fs.readFileSync(file, 'utf8');
-  const body = source.replace(/href="([^"]+)"/g, (original, href) => {
-    if (/^(?:#|[a-z][a-z0-9+.-]*:|\/\/)/i.test(href)) return original;
-    const url = new URL(href, 'https://preview.invalid/');
-    if (url.pathname.endsWith('/TELJES-HONLAPTERV.md')) return 'href="/latvanyterv#teljes-terv.html"';
-    if (url.pathname.endsWith('/ELLENORZES.md')) return 'href="/latvanyterv#teljes-terv.html%23ellenorzes"';
-    const pathname = url.pathname === '/index.html' ? '/' : url.pathname.replace(/\.html$/, '');
-    return `href="${pathname}${url.search}${url.hash}"`;
+fs.cpSync(path.join(source, 'static'), output, { recursive: true, filter: entry => !entry.endsWith('.d.mts') });
+const config = { ga4Id, adsId, adsLabel, contactEnabled, contactForm: integration.contactForm };
+fs.writeFileSync(path.join(output, 'site-config.js'), 'window.MeshDentConfig = Object.freeze(' + JSON.stringify(config) + ');\n');
+const hashes = Object.fromEntries(fs.readdirSync(output).filter(x => /\.(css|js)$/.test(x)).map(name => [name, createHash('sha256').update(fs.readFileSync(path.join(output, name))).digest('hex').slice(0, 10)]));
+const pages = JSON.parse(fs.readFileSync(path.join(source, 'generated/pages.json'), 'utf8'));
+for (const page of pages) {
+  if (page.externalExport) continue;
+  let html = fs.readFileSync(path.join(source, 'generated', page.slug + '.html'), 'utf8')
+    .replaceAll('__SITE_URL__', origin).replaceAll('__ROBOTS__', indexable ? 'index, follow, max-image-preview:large' : 'noindex, nofollow');
+  html = html.replace(/href="([^"]+)"/g, (match, href) => {
+    if (/^(?:#|[a-z][a-z0-9+.-]*:|\/\/)/i.test(href)) return match;
+    const url = new URL(href, origin);
+    const route = url.pathname === '/index.html' ? '/' : url.pathname.replace(/\.html$/, '');
+    return `href="${route}${url.search}${url.hash}"`;
   });
-  fs.writeFileSync(file, body);
-  pages++;
+  html = html.replace(/(src|href)="\/?([^"/?]+\.(?:css|js))"/g, (match, attr, name) => `${attr}="/${name}?v=${hashes[name]}"`);
+  html = html.replace(/(src|data-image)="assets\//g, '$1="/assets/');
+  if (/\{\{|__SITE_URL__|__ROBOTS__|OXO|github\.com/i.test(html)) throw new Error('Stale or forbidden content in ' + page.slug);
+  fs.writeFileSync(path.join(output, page.slug + '.html'), html);
 }
-fs.writeFileSync(path.join(output, 'latvanyterv.html'), standalone.replace('Helyi, interaktív látványterv', 'Interaktív látványterv · Fogív 03'));
-for (const name of ['TELJES-HONLAPTERV.md','FOOLDAL-02.md','ELLENORZES.md','oldalterv.csv','oldalterv.json','kepvalogatas.json','HASZNALAT.txt']) {
-  fs.copyFileSync(path.join(design, name), path.join(output, name));
-}
-fs.writeFileSync(path.join(output, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
-console.log(JSON.stringify({ output: 'dist', pages: pages + 1, home: '/', designViewer: '/latvanyterv', freedomAirPlan: '/FreedomaAir' }));
+const urls = pages.filter(page => !page.noindex).map(page => `  <url><loc>${origin}${page.route}</loc></url>`).join('\n');
+fs.writeFileSync(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
+fs.writeFileSync(path.join(output, 'robots.txt'), indexable ? `User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${origin}/sitemap.xml\n` : 'User-agent: *\nDisallow: /\n');
+fs.writeFileSync(path.join(output, 'llms.txt'), `# MeshDent\n\n> Digitális fogtechnikai labor Budapesten, rendelőkkel együttműködésben.\n\nMeshDent Kft. — 1139 Budapest, Petneházy u. 14.\nKapcsolat: meshdentkft@gmail.com; +36 70 361 9962; +36 70 353 4000.\nA MeshDent fogtechnikai labor; fogorvosi vizsgálatot és kezelést nem végez.\n\n## Szolgáltatások és információk\n${pages.filter(p => !p.noindex).map(p => `- [${p.title}](${origin}${p.route})`).join('\n')}\n\nA műszaki lehetőségekről és vállalási határidőkről közvetlen egyeztetés szükséges.\n`);
+console.log(JSON.stringify({ output: 'dist', pages: pages.length, indexable, contactEnabled, analyticsConfigured: Boolean(ga4Id), adsConfigured: Boolean(adsId) }));

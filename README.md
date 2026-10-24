@@ -1,73 +1,63 @@
-# MeshDent_TeljesHonlap
+# MeshDent teljes honlap
 
-A MeshDent teljes honlapjának megújítási projektje.
+Az ügyfél által elfogadott főoldal az „Összekapcsolva” nyitását és a „Folyamat” görgetésre képváltó részét egyesíti. A nyilvános honlap nem tartalmaz koncepcióválasztót vagy OXO-tartalmat.
 
-## Webes előnézet
+- Honlap: https://meshdentteljeshonlap.vercel.app/
+- Teljes DOF Freedom Air landing: https://meshdentteljeshonlap.vercel.app/FreedomaAir
+- Kapcsolat: https://meshdentteljeshonlap.vercel.app/kapcsolat
 
-- [Új főoldal és bejárható aloldalak](https://meshdentteljeshonlap.vercel.app/)
-- [Világos, barátságos főoldalváltozat](https://meshdentteljeshonlap.vercel.app/vilagosabb) — a logó színeivel és a korábbi családi nyitóképpel.
-- [03 · A szkenneléstől a kész fogpótlásig](https://meshdentteljeshonlap.vercel.app/folyamat) — görgetéshez kapcsolódó képek és a munkafolyamat négy fejezete.
-- [04 · Rendelő és labor, összekapcsolva](https://meshdentteljeshonlap.vercel.app/osszekapcsolva) — interaktív kapcsolati ábra, világos megjelenés.
-- [Teljes látványterv oldalválasztóval és mobilnézettel](https://meshdentteljeshonlap.vercel.app/latvanyterv)
-- [Oldaljegyzék és részletes terv](https://meshdentteljeshonlap.vercel.app/terv)
-- [Korábbi, 03-as tervcsomag](artifacts/MeshDent-honlapterv-2026-10-21-v3.zip)
+## Fejlesztés
 
-A Vercel-projekt neve `meshdent_teljeshonlap`, a telepítési ág `main`. A `vercel.json` a `node scripts/build-preview.mjs` parancsot futtatja, és kizárólag a `dist/` mappát publikálja. A buildhez nincs külső csomag vagy titkos környezeti változó.
+A fő honlap előre generált, önálló HTML-oldalakból áll. A saját CSS/JavaScript kezeli a menüt, képgalériát, munkafolyamatot, CRM-et és a hozzájárulásos mérést. A Freedom Air az eredeti Next.js/React oldal külön, statikus exportja; saját stílusa és médiája megmarad. Nincs távoli beágyazás vagy iframe.
 
-A főcímen közvetlenül a főoldal jelenik meg. A `/latvanyterv` az oldalválasztós áttekintő; a `/FreedomaAir` jelenleg a meglévő landing átvételének terve. Minden útvonal előnézeti, keresőindexelés nélkül. Az űrlapok próbaűrlapok.
-
-## Jelenlegi fázis: teljes honlapterv és látványterv
-
-- [Egy fájlból megnyitható, interaktív látványterv](design/2026-10-21/MeshDent-latvanyterv.html) — 02-es főoldalkoncepció, 16 fogas, anatómiai részletekkel kidolgozott fogívgrafika, három kameraállás, asztali/mobil nézet, oldalválasztó és saját képek.
-- [Az új főoldal vizuális és mozgási terve](design/2026-10-21/FOOLDAL-02.md).
-- [A világos változat színei, képei és ellenőrzése](design/2026-10-21/VILAGOSABB.md).
-- [A harmadik és negyedik változat működése és ellenőrzése](design/2026-10-21/KONCEPCIOK-03-04.md).
-- [Teljes honlapterv](design/2026-10-21/TELJES-HONLAPTERV.md) — oldalszerkezet, megjelenés, tartalom, CRM, Google-mérés, SEO és AI-keresés.
-- [Oldalankénti SEO-terv](design/2026-10-21/oldalterv.csv) és [képválogatás](design/2026-10-21/kepvalogatas.json).
-- [Ellenőrzések és a prototípus határa](design/2026-10-21/ELLENORZES.md).
-
-A látványterv weben és helyben is kipróbálható. A fő honlap 13 oldalához készültek szerkesztett tervezési változatok; a Freedom Air külön illesztési lapot kapott. Az űrlappróba nem küld vagy ment adatot. A meglévő Freedom Air landing átemelése és az éles integrációk a megvalósítási szakasz feladatai.
-
-## Forrásgyűjtés
-
-A jelenlegi `meshdent.hu` szerkezete és tartalma adja a teljes honlap alapját. A meglévő `zalan002/Meshdent` Freedom Air-oldal a **`/FreedomaAir`** útvonalra kerül majd, megőrzött megjelenéssel és CRM-folyamattal.
-
-- [Kutatási összefoglaló](research/2026-10-21/KUTATASI-OSSZEFOGLALO.md)
-- [Helyben megnyitható, kereshető médiatár](research/2026-10-21/media-library.html)
-- [CRM-, mérési és SEO-követelmények](research/2026-10-21/TECHNIKAI-ES-MERESI-TERV.md)
-- [Pontosítandó adatok](research/2026-10-21/ELLENORIZENDO-ADATOK.md)
-- [Média-forrásjegyzék](research/2026-10-21/manifests/media-catalog.csv)
-- [Importált Instagram-forrásjegyzék, önálló HTML](research/2026-10-21/instagram-forrasjegyzek.html)
-- [Instagram-import eredménye és hiányzó videó](research/2026-10-21/INSTAGRAM-IMPORT.md)
-- [Oldalankénti tartalmak](research/2026-10-21/content/)
-
-A repó tartalmazza a gyűjtött forrásmédiát, a tartalmi jegyzékeket és a tervezési fájlokat. A nyers hálózati válaszdumpok és a korábbi, ismétlődő ZIP-csomagok helyben maradnak. A médiatár a teljes helyi projektmappával együtt használható; csak a HTML-fájl átmásolása nem viszi magával a képeket. A Vercel webes előnézetébe a kiválasztott prototípus és annak képei kerülnek.
-
-## Gyűjtési korlátok
-
-13 weboldal, 84 weboldali képmásolat, 49 különböző Freedom Air-médiafájl és 1 Instagram profilbélyegkép mellett a felhasználó által feltöltött Instagram-archívumot is feldolgoztuk: **168 bejegyzés metaadatai és képaláírásai, 182 fotó és 1 Reels-borítókép**. Egy teljes Reels-videófájl még hiányzik. A katalógusban 317 média-előfordulás, 316 különböző fájltartalom szerepel. A webes képek közvetítőn keresztül mentett, újrakódolt másolatok; a repófájlok és az átvett Instagram-képek bájtazonosak a bemeneti fájlokkal. Az Instagram-képek a platform által kiszolgált változatok, nem a feltöltés előtti eredetik.
-
-## Kutatási eszközök
-
-- `scripts/collect_meshdent.py`: a mentett WordPress oldal-/médialistából gyűjt; a nyers kezdőforrásokat a kutatási `raw/` mappából olvassa. Nem küld űrlapot, nem módosít külső rendszert.
-- `scripts/build_research_catalog.py`: duplikált repómédia kiszűrése, HTML-katalógus és CSV/JSON leltárak előállítása.
-- `scripts/import_instagram.py`: feltöltött ZIP és HTML egyeztetése, képek SHA-256/méret/felbontás ellenőrzése, bejegyzés- és médialeltár importálása.
-- Python-függőségek: `lxml`, `Pillow`. A PDF-szövegkinyeréshez `pdftotext`, a videóleltárhoz `ffprobe` használható.
-
-A terv és a statikus látványprototípus a `design/2026-10-21/` mappában található. A Vercel a látványprototípust szolgálja ki; az éles integrációkat tartalmazó honlap még nincs megvalósítva.
-
-Helyi webes build:
+- `site/templates/home.html`: az összeállított főoldal forrása.
+- `site/content/`: szolgáltatások, képek és nyilvános integrációs azonosítók.
+- `site/build.py`, `site/components.py`: fő honlap generátora.
+- `site/static/`: közös stílusok, böngészős működés, CRM-kliens.
+- `site/generated/`: generált HTML-ek; a Vercel-buildhez verziókezelve.
+- `app/FreedomaAir/`, `components/`, `lib/`: átemelt DOF-oldal és CRM-bekötés.
+- `public/`: a DOF-oldal eredeti médiája és saját kiszolgálású betűkészletei.
+- `design/2026-10-21/`, `research/2026-10-21/`: megőrzött tervek és forrásarchívum. Nem kerülnek a publikált csomagba.
 
 ```bash
-node scripts/build-preview.mjs
+npm ci
+python site/build.py
+npm run typecheck
+npm test
+npm run build
+npm start
 ```
 
-A tervezési források módosítása után, a generált HTML-ek frissítéséhez:
+A Python-generátorhoz Python 3.12 szükséges, külső csomag nem kell. A böngészős ellenőrzőhöz Chromium és Node 24 kell: `node tests/browser-check.mjs`. A teszt minden külső hálózati hívást elfog; valódi leadet és analitikai eseményt nem küld. A helyi szerver a `127.0.0.1:8766` címen indul.
 
-```bash
-node design/2026-10-21/verify_dental_arch.mjs
-node design/2026-10-21/build_dental_fallback.mjs
-python design/2026-10-21/build_prototype.py
-python design/2026-10-21/build_standalone.py
-node scripts/build-preview.mjs
-```
+A Vercel `main` ágból, `npm run build` paranccsal épít; a publikált könyvtár `dist`. A telepítési kulcsok és környezeti titkok nincsenek a repóban.
+
+## CRM
+
+Az általános kapcsolatfelvétel a felhasználó által megadott `26ff2dd524be7123e4dd8604c91801d7` publikus formot használja. Mezők: `last_name`, `email`, `phone`, `company`. A `company` ebben az űrlapban **a „Miben segíthetünk?” üzenetet** jelenti. A választott szolgáltatás az üzenet előtagja; nincs kitalált CRM-mező.
+
+A Freedom Air megtartja saját `b3725c8d4d3837fccbae3a3e00873109` formját és mezőit. A részleges mentés a telefonszám és a kifejezett hozzájárulás után történik. Mindkét űrlap a CRM aláírt `submission` + `resume` válaszával egészíti ki ugyanazt az érdeklődést. A végső beküldés bevárja a részleges rögzítést. Egyértelmű mezőhiba javítható; 403 esetén egyszeri tokenfrissítés történik; bizonytalan hálózati hiba után nincs automatikus új beküldés vagy hamis sikerjelzés.
+
+Az általános űrlap a kitöltés végén ment, nem küld adatot gépelés közben. A korábbi Freedom Air n8n/CAPI-mellékágát az új honlap nem hívja: az új oldalon a CRM a rögzítés egyetlen igazolási pontja. Az eredeti külön Vercel-projekt változatlan.
+
+## GA4, Ads és hozzájárulás
+
+A megerősített GA4-azonosító: `G-8ZCCREN6X4`. A Google-kód csak az analitikai hozzájárulás után töltődik be. Alapból minden Consent Mode v2 kategória tiltott; analitika és marketing külön választható, a személyre szabott reklám tiltott marad. A beállítás visszavonható és hat hónap után lejár.
+
+Események: `page_view`, `click_phone`, `click_email`, `generate_lead`. A leadesemény csak sikeres CRM-válasz után keletkezik. A köszönőoldal megnyitása vagy újratöltése nem küld konverziót. Név, e-mail, telefonszám, üzenet és teljes query string nem kerül a mérésekbe.
+
+A Google Ads aktiválásához még a `PUBLIC_ADS_ID` (`AW-…`) és `PUBLIC_ADS_LABEL` szükséges. Ezek együtt kapcsolják be az Ads-kategóriát és a sikeres leadhez tartozó, CRM-azonosítóval deduplikált konverziót. GA4-importot és közvetlen Ads-konverziót ugyanarra a célra ne állítsunk egyszerre elsődlegesre.
+
+## Keresőoptimalizálás és saját domain
+
+Egyedi cím/leírás/canonical/OG, szerverről olvasható HTML, Organization/WebSite/Service/BreadcrumbList/FAQ strukturált adatok, `sitemap.xml`, `robots.txt` és `llms.txt` készül. A Vercel előnézeti címe nem indexelhető. Az `llms.txt` tájékoztató, nem garantál kereső- vagy AI-megjelenést.
+
+A saját domain átállításakor `SITE_URL=https://meshdent.hu` és `SITE_INDEXABLE=true` szükséges új builddel. A régi élő domaint ez a fejlesztés nem módosította. A koncepció-URL-ek az új főoldalra, a megszűnt OXO-URL a DOF-oldalra irányítanak.
+
+## Ellenőrzés és még szükséges üzleti adatok
+
+A 2026-10-24-i ellenőrzés: TypeScript és production build; CRM-protokoll tesztelt sikerrel, 422/403/5xx hibákkal, hiányzó bizonylattal, hálózati bizonytalansággal és kettős beküldéssel; asztali/mobil Chromium-ellenőrzés; képszakaszok, menü, galéria, hozzájárulás, mérés és mindkét űrlap útvonala.
+
+A fejlesztői környezet a CRM éles végpontját hálózati hibával/tiltással utasította el, így az élő CRM-beérkezés nincs igazolva. A böngészőtesztek ellenőrzött CRM-válaszokkal futnak. A GA4 DebugView és Google Ads fiókon belüli konverziódiagnosztika nincs igazolva.
+
+A saját domain élesítése előtt még szükséges: hivatalos cégjegyzékszám/adószám, az adatmegőrzés és a CRM-adatfeldolgozó teljes adatainak véglegesítése, valamint az Ads konverzióazonosító. Ezeket nem pótoltuk feltételezéssel. Az átemelt DOF-oldal műszaki állításai az eredeti forrás szerinti tartalmak; az ismert szakmai adateltérések a kutatási jegyzékben szerepelnek.

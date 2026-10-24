@@ -1,17 +1,99 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "node scripts/build-preview.mjs",
-  "installCommand": "",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/osszekapcsolva",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/folyamat",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/vilagosabb",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/latvanyterv",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/terv",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/oxo-implant-service",
+      "destination": "/FreedomaAir",
+      "permanent": true
+    },
+    {
+      "source": "/jogi-oldalak",
+      "destination": "/adatkezeles",
+      "permanent": false
+    },
+    {
+      "source": "/freedomair",
+      "destination": "/FreedomaAir",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, nosnippet" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
     }
   ]

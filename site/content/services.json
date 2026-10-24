@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "same-day-cirkon-koronak-hidak",
+    "title": "SAME DAY cirkon koronák és hidak",
+    "short": "SAME DAY koronák és hidak",
+    "image": "same-day",
+    "topic": "same-day",
+    "tag": "CAD/CAM · Egyedi fogpótlás",
+    "intro": "Digitális tervezéssel és CAD/CAM gyártással készülő koronák és hidak. Az egyedi munkát a rendelővel egyeztetett igényekhez és ütemezéshez igazítjuk.",
+    "blocks": [
+      [
+        "Digitálisan tervezett, egyedileg kidolgozott",
+        "A MeshDent a koronák és hidak tervezéséhez és gyártásához CAD/CAM szoftvereket használ. A digitális munkafolyamatot a kész fogpótlás egyedi kidolgozása egészíti ki."
+      ],
+      [
+        "Egyeztetés az elkészítés előtt",
+        "A kiinduló adatok, az anyag és az elvárt megjelenés egyeztetése segíti a közös munkát. Az expressz elkészítés lehetőségéről és feltételeiről közvetlenül a laborral egyeztessen."
+      ]
+    ],
+    "faq": [
+      [
+        "Hogyan indul az együttműködés?",
+        "Vegye fel a kapcsolatot a laborral. Az adott munkáról, a szükséges adatok átadásáról és az ütemezésről közvetlenül egyeztetünk."
+      ],
+      [
+        "Milyen technológiával készülnek a munkák?",
+        "A szolgáltatás digitális CAD-tervezésre és CAM-gyártásra épül, egyedi kidolgozással."
+      ]
+    ],
+    "intent": "cirkon korona labor; SAME DAY korona",
+    "description": "SAME DAY cirkon koronák és hidak a MeshDent budapesti digitális laborjában. CAD/CAM tervezés, egyedi kidolgozás és közvetlen szakmai egyeztetés."
+  },
+  {
+    "slug": "leplezett-zirkon-korona",
+    "title": "Leplezett zirkon koronák",
+    "short": "Leplezett zirkon koronák",
+    "image": "layered",
+    "topic": "leplezett-zirkon",
+    "tag": "Digitális váz · Egyedi porcelánleplezés",
+    "intro": "Digitálisan megtervezett cirkóniumváz és egyedileg felépített porcelánleplezés. A MeshDent a forma, a szín és a részletek kidolgozását egy közös munkafolyamatban kezeli.",
+    "blocks": [
+      [
+        "Digitális forma és mikroszkópos ellenőrzés",
+        "Az anatómikus tervezést követően a vázat a porcelánleplezéshez alakítjuk. A pontosság és a széli záródás ellenőrzése mikroszkóp alatt történik."
+      ],
+      [
+        "GC Initial porcelánleplezés",
+        "A váz GC Initial porcelánleplezést kap. A végső árnyalat és megjelenés kialakítását az adott munka és a rendelővel egyeztetett igények határozzák meg."
+      ]
+    ],
+    "faq": [
+      [
+        "Miben különbözik az anatómikus zirkontól?",
+        "A leplezett munkánál a megtervezett vázra külön porcelánleplezés kerül. Az anatómikus megoldás teljes formában, külön kerámialeplezés nélkül készül."
+      ],
+      [
+        "Mi történik a leplezés előtt?",
+        "A digitális váztervezést mikroszkópos ellenőrzés követi a MeshDent munkafolyamata szerint."
+      ]
+    ],
+    "intent": "leplezett zirkon korona fogtechnika",
+    "description": "Leplezett zirkon koronák digitális váztervezéssel, mikroszkópos ellenőrzéssel és GC Initial porcelánleplezéssel. Ismerje meg a MeshDent munkafolyamatát."
+  },
+  {
+    "slug": "esthetic-anatomikus-zirkon-fogpotlas",
+    "title": "ESTHETIC anatómikus zirkon fogpótlás",
+    "short": "ESTHETIC anatómikus zirkon",
+    "image": "esthetic",
+    "topic": "esthetic",
+    "tag": "Teljes anatómia · Többrétegű cirkónia",
+    "intro": "Teljes anatómikus formában készülő, többrétegű cirkóniumalapú fogpótlások. A digitális tervezés és az egyedi kidolgozás a természetes megjelenést szolgálja.",
+    "blocks": [
+      [
+        "A forma már a tervezés része",
+        "A teljes anatómikus restauráció a megtervezett végső formában készül el, külön kerámialeplezés nélkül. A MeshDent meglévő kínálatában többrétegű cirkóniaanyagok szerepelnek."
+      ],
+      [
+        "Árnyalat és részletek",
+        "Az anyag és az árnyalat kiválasztását az adott eset igényeihez kell igazítani. A felület, a forma és a fogszín kialakítása az egyedi munka része."
+      ]
+    ],
+    "faq": [
+      [
+        "Mit jelent a teljes anatómikus kialakítás?",
+        "A pótlást az anatómikus formájában gyártják le; nincs rajta külön felépített kerámialeplezés."
+      ],
+      [
+        "Milyen információval induljak?",
+        "Az adott munkával és a kívánt megjelenéssel keresse a labort. A szükséges digitális és színinformációkat az egyeztetésen pontosítjuk."
+      ]
+    ],
+    "intent": "anatómikus zirkon fogpótlás; monolit cirkónia",
+    "description": "ESTHETIC anatómikus zirkon fogpótlások a MeshDenttől. Teljes anatómikus kialakítás, többrétegű cirkónia és digitális tervezés budapesti laborban."
+  },
+  {
+    "slug": "lathatatlan-fogszabalyozas",
+    "title": "Láthatatlan fogszabályozás",
+    "short": "Láthatatlan fogszabályozás",
+    "image": "aligner",
+    "topic": "fogszabalyozas",
+    "tag": "Átlátszó sínek · Digitális tervezés",
+    "intro": "Egyedileg tervezett, átlátszó sínekre épülő fogszabályozási megoldás. A digitális tervezés a páciens fogazatához igazodik; a kezelés alkalmasságáról a kezelő fogorvos dönt.",
+    "blocks": [
+      [
+        "Egyedi átlátszó sínek",
+        "A sínek a páciens fogaihoz igazítva készülnek. A kivehető kialakítás megkönnyíti a tisztítást és az étkezést, a tervezésben speciális szoftverek segítenek."
+      ],
+      [
+        "A fogorvosi döntés szerepe",
+        "Ez az eljárás nem minden esetben alkalmazható. A megfelelő kezelés kiválasztásához a kezelő fogorvos szakértelme és a páciens egyedi fogászati helyzetének vizsgálata szükséges."
+      ]
+    ],
+    "faq": [
+      [
+        "Mindenkinek megfelelő ez a megoldás?",
+        "Nem. Az alkalmasságról és a kezelési tervről a kezelő fogorvos dönt az egyéni fogászati helyzet alapján."
+      ],
+      [
+        "Milyen eszközről van szó?",
+        "Egyedileg készülő, átlátszó, kivehető sínekről, amelyek digitálisan megtervezett folyamat részei."
+      ]
+    ],
+    "intent": "láthatatlan fogszabályozó sín digitális tervezés",
+    "description": "Egyedi átlátszó fogszabályozó sínek és digitális tervezés. Ismerje meg a MeshDent szolgáltatását és a fogorvosi alkalmassági döntés szerepét."
+  },
+  {
+    "slug": "implantatumra-keszult",
+    "title": "Implantátumra készült fogpótlások",
+    "short": "Implantátumra készült pótlások",
+    "image": "full-arch",
+    "topic": "implantatum",
+    "tag": "Solid Full Arch Zirconia · All-on-X",
+    "intro": "Digitális adatokra épülő, implantátumon rögzülő fogpótlások. A végleges teljes íves munka előtt PMMA vagy try-in próba segíti az egyeztetést a fogorvossal és a pácienssel.",
+    "blocks": [
+      [
+        "A digitális adatoktól a próbáig",
+        "A tervezéshez intraorális szkenneléssel és a DOF Freedom Air rendszerével rögzített adatok használhatók. A kiindulási állapot, arcfotók és arcscan is segítheti a tervezést."
+      ],
+      [
+        "Próba a végleges munka előtt",
+        "A PMMA vagy try-in segítségével a páciens és a fogorvos a végleges gyártás előtt jelezheti észrevételeit. Ezután készül a monolit cirkon-dioxid pótlás a megállapított terv szerint."
+      ],
+      [
+        "Teljes íves megoldások",
+        "A jelenlegi MeshDent-kínálat Solid Full Arch Zirconia munkákat, valamint All-on-4 és All-on-6 esetekhez készülő pótlásokat is bemutat."
+      ]
+    ],
+    "faq": [
+      [
+        "Van próba a végleges fogpótlás előtt?",
+        "A jelenlegi munkafolyamat PMMA vagy try-in készítését tartalmazza, hogy a módosítási igények a végleges gyártás előtt jelezhetők legyenek."
+      ]
+    ],
+    "intent": "implantátumos fogpótlás labor; All-on-X fogtechnika",
+    "description": "Implantátumra készülő teljes íves fogpótlások a MeshDent digitális laborjában. Solid Full Arch Zirconia, digitális tervezés és próba a végleges munka előtt."
+  }
+]
