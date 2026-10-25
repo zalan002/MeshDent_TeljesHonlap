@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-25",
+  "origin": "https://meshdentteljeshonlap.vercel.app",
+  "contact_enabled": true,
+  "forms": [
+    {
+      "name": "general",
+      "public_key": "26ff2dd524be7123e4dd8604c91801d7",
+      "get_status": 200,
+      "render_token_received": true,
+      "allowed_origin": "*"
+    },
+    {
+      "name": "freedom",
+      "public_key": "b3725c8d4d3837fccbae3a3e00873109",
+      "get_status": 200,
+      "render_token_received": true,
+      "allowed_origin": "*"
+    }
+  ],
+  "invalid_post_checks": [
+    {
+      "form": "general",
+      "status": 422,
+      "validation_error": "Az adatkezelési hozzájárulás elfogadása kötelező.",
+      "cors": "*"
+    },
+    {
+      "form": "freedom",
+      "status": 422,
+      "validation_error": "Az adatkezelési hozzájárulás elfogadása kötelező.",
+      "cors": "*"
+    }
+  ],
+  "personal_data_sent": false,
+  "successful_leads_created": 0,
+  "scope": "Live connectivity, CORS and rejection of invalid submissions. No successful CRM intake or Google-account verification claimed."
+}

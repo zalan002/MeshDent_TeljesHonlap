@@ -58,6 +58,8 @@ A saját domain átállításakor `SITE_URL=https://meshdent.hu` és `SITE_INDEX
 
 A 2026-10-24-i ellenőrzés: TypeScript és production build; CRM-protokoll tesztelt sikerrel, 422/403/5xx hibákkal, hiányzó bizonylattal, hálózati bizonytalansággal és kettős beküldéssel; asztali/mobil Chromium-ellenőrzés; képszakaszok, menü, galéria, hozzájárulás, mérés és mindkét űrlap útvonala.
 
-A fejlesztői környezet a CRM éles végpontját hálózati hibával/tiltással utasította el, így az élő CRM-beérkezés nincs igazolva. A böngészőtesztek ellenőrzött CRM-válaszokkal futnak. A GA4 DebugView és Google Ads fiókon belüli konverziódiagnosztika nincs igazolva.
+A 2026-10-25-i éles kapcsolati ellenőrzéskor mindkét CRM-form GET kérése HTTP 200 választ és érvényes render-tokent adott; az új Vercel-origin engedélyezett. Személyes adatok nélküli, hozzájárulást nem tartalmazó POST-tal a szerveroldali elutasítást is ellenőriztük: mindkét form HTTP 422 választ adott. Érvényes leadet ez az ellenőrzés nem hozott létre; a sikeres rögzítés böngészős tesztje továbbra is ellenőrzött CRM-válasszal igazolt. A GA4 DebugView és Google Ads fiókon belüli konverziódiagnosztika nincs igazolva.
+
+A Vercel-címen a production telepítés fut, a `contactEnabled` beállítás igaz, a fő honlap a felhasználó által megadott éles CRM-formot használja. Külön próba/éles CRM-kapcsoló nincs. A `meshdent.hu` saját domain DNS-ét külső szolgáltató kezeli, és az ellenőrzéskor még a régi tárhelyre mutatott; ezt az ellenőrzés nem módosította.
 
 A saját domain élesítése előtt még szükséges: hivatalos cégjegyzékszám/adószám, az adatmegőrzés és a CRM-adatfeldolgozó teljes adatainak véglegesítése, valamint az Ads konverzióazonosító. Ezeket nem pótoltuk feltételezéssel. Az átemelt DOF-oldal műszaki állításai az eredeti forrás szerinti tartalmak; az ismert szakmai adateltérések a kutatási jegyzékben szerepelnek.
