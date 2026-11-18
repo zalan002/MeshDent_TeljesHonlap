@@ -29,9 +29,30 @@
   const lightbox = document.querySelector('#lightbox');
   document.querySelectorAll('[data-image]').forEach(button => button.addEventListener('click', () => {
     if (!lightbox?.showModal) { window.open(button.dataset.image, '_blank', 'noopener'); return; }
-    const image = lightbox.querySelector('img'); image.src = button.dataset.image; image.alt = button.dataset.alt;
-    lightbox.querySelector('h2').textContent = button.dataset.title;
-    lightbox.querySelector('a').href = button.dataset.source;
+    const work = button.closest('.work');
+    const image = lightbox.querySelector('img');
+    const sourceLink = lightbox.querySelector('a');
+    function showPhoto(photo) {
+      const preview = photo.querySelector('img');
+      image.src = preview.src;
+      image.alt = preview.alt;
+      sourceLink.href = photo.dataset.source;
+    }
+    lightbox.querySelector('h2').textContent = work.querySelector('h3').textContent;
+    lightbox.querySelector('.gallery-thumbnails')?.remove();
+    showPhoto(button);
+    const thumbnails = work.querySelector('template')?.content.cloneNode(true);
+    if (thumbnails) {
+      const choices = [...thumbnails.querySelectorAll('button')];
+      choices.forEach((choice, index) => {
+        choice.setAttribute('aria-pressed', String(index === 0));
+        choice.addEventListener('click', () => {
+          showPhoto(choice);
+          choices.forEach(item => item.setAttribute('aria-pressed', String(item === choice)));
+        });
+      });
+      lightbox.append(thumbnails);
+    }
     lightbox.showModal();
   }));
   document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
