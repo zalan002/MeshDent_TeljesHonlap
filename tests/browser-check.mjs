@@ -73,6 +73,22 @@ try{
  await goto('/munkaink');await evaluate('document.querySelector("[data-filter=implant]").click()');
  assert.equal(await evaluate('[...document.querySelectorAll("[data-category]")].filter(x=>!x.hidden).length'),1);
  await evaluate('document.querySelector("[data-category=implant] [data-image]").click()');assert.equal(await evaluate('document.querySelector("#lightbox").open'),true);
+ const galleryPhotos = await evaluate(`(async () => {
+   const dialog = document.querySelector('#lightbox');
+   const image = dialog.querySelector('img');
+   const photos = [];
+   for (const button of dialog.querySelectorAll('.gallery-thumbnails button')) {
+     button.click();
+     await image.decode();
+     photos.push([image.src.split('/').pop(), dialog.querySelector('a').pathname.split('/').at(-2)]);
+   }
+   return photos;
+ })()`);
+ assert.deepEqual(galleryPhotos, [
+   ['DTf6tJtj9uy.jpg', 'DTf6tJtj9uy'], ['DY-eb6IjQJZ.jpg', 'DY-eb6IjQJZ'],
+   ['DWeqMuYDEyK.jpg', 'DWeqMuYDEyK'], ['DVwHUd3DWnN.jpg', 'DVwHUd3DWnN'],
+   ['full-arch.jpg', 'DUi3W8Fj0lx'],
+ ]);
  await evaluate('document.querySelector("#lightbox [data-close]").click()');
  await size(1440);await goto('/kapcsolat?tema=implantatum');await until('Boolean(document.querySelector("[data-contact-form]:not([hidden])"))');await shot('contact-desktop');
  assert.equal(await evaluate('document.querySelector("[name=topic]").value'),'implantatum');

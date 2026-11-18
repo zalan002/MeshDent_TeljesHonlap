@@ -81,7 +81,7 @@ about+='''<section class="section soft"><div class="wrap text-columns"><div><p c
 page('rolunk','Digitális szemlélet. Személyes együttműködés.','Ismerje meg a MeshDent budapesti digitális fogtechnikai labort. Digitális tervezés, egyedi fogpótlások, közvetlen szakmai együttműködés.',about,'AboutPage')
 
 workpage=c.breadcrumb('Munkáink')+'<section class="intro wrap"><p class="eyebrow">MeshDent / Referenciák</p><h1>A részletekben látszik a munkánk.</h1><p class="lead">Válogatás a labor saját fogpótlásaiból. A formák, a felületek és az egyedi kidolgozás közelről.</p></section><section class="section wrap line-top">'+c.gallery(filters=True)+'</section>'+c.cta_band()
-page('munkaink','Fogtechnikai referenciák és munkáink','MeshDent referenciák: saját zirkon és implantátumos fogpótlások, 3D-nyomtatott fogsor és közeli részletfotók.',workpage,'CollectionPage')
+page('munkaink','Fogtechnikai referenciák és munkáink','MeshDent referenciák: saját zirkon fogpótlások, All on X munkák, ideiglenes fogpótlások és közeli részletfotók.',workpage,'CollectionPage')
 
 logos=''.join(f'<div class="logo-tile">{img(key)}</div>' for key in ['nobel','medit','medentika','exocad','dentaltechnika','3shape'])
 partners=c.breadcrumb('Partnereink')+'<section class="intro wrap"><p class="eyebrow">Szakmai kapcsolatok</p><h1>Partnereink.</h1><p class="lead">Vállalatok és technológiák a MeshDent szakmai környezetében.</p></section><section class="section wrap line-top"><div class="logo-grid">'+logos+'</div></section>'+c.cta_band('Kapcsolódjunk szakmailag.')
