@@ -2,16 +2,7 @@ import html
 from urllib.parse import quote
 esc = html.escape
 ASSETS = {}
-WORKS = [
-    ('All on X munkák', 'implant', 'Implantátumos munkák', 'implantatumra-keszult.html',
-     ['DTf6tJtj9uy', 'DY-eb6IjQJZ', 'DWeqMuYDEyK', 'DVwHUd3DWnN', 'full-arch']),
-    ('ESTHETIC zirkon referencia', 'zircon', 'Zirkon', 'esthetic-anatomikus-zirkon-fogpotlas.html',
-     ['C5y9j55N_N8', 'DXunKH4Dpbu', 'DCE5FiFM3SB', 'DI9jHRpInfE']),
-    ('Zirkon fogpótlás — részletek', 'zircon', 'Zirkon', 'esthetic-anatomikus-zirkon-fogpotlas.html',
-     ['detail']),
-    ('Ideiglenes Fogpótlások', 'other', 'Egyéb munkák', 'munkaink.html',
-     ['DFql-7WMU6X', 'DA6bNE6M7kW', 'DXE-pNvjFsv']),
-]
+WORKS = [('full-arch', 'Implantátumos teljes íves munka', 'implant', 'Implantátumos munkák', 'implantatumra-keszult.html'), ('esthetic', 'ESTHETIC zirkon referencia', 'zircon', 'Zirkon', 'esthetic-anatomikus-zirkon-fogpotlas.html'), ('detail', 'Zirkon fogpótlás — részletek', 'zircon', 'Zirkon', 'esthetic-anatomikus-zirkon-fogpotlas.html'), ('dentures', '3D-nyomtatott fogsor', 'other', 'Egyéb munkák', 'munkaink.html')]
 
 def contact_link(topic="general"):
     return "kapcsolat.html?tema="+quote(topic)+"#urlap"
@@ -42,25 +33,7 @@ def gallery(works=WORKS, filters=False):
     if filters:
         result='<div class="filters" role="group" aria-label="Referenciák szűrése">'+''.join(f'<button class="filter" data-filter="{key}" aria-pressed="{str(i==0).lower()}">{label}</button>' for i,(key,label) in enumerate([('all','Összes'),('zircon','Zirkon'),('implant','Implantátumos munkák'),('other','Egyéb munkák')]))+'</div><p class="gallery-count" id="gallery-count" role="status">4 referencia a válogatásban</p>'
     cards=[]
-    for title, category, label, href, photos in works:
-        cover = photos[0]
-        thumbnails = ''
-        badge = '＋'
-        action = 'Kép nagyítása'
-        if len(photos) > 1:
-            badge = f'{len(photos)} kép'
-            action = f'Galéria megnyitása ({badge})'
-            buttons = ''.join(
-                f'<button type="button" data-source="{esc(ASSETS[key]["source"])}" '
-                f'aria-label="{i}. kép – {esc(ASSETS[key]["alt"])}">{img(key)}</button>'
-                for i, key in enumerate(photos, 1)
-            )
-            thumbnails = f'<template><div class="gallery-thumbnails" role="group" aria-label="Képválasztó">{buttons}</div></template>'
-        cards.append(
-            f'<article class="work" data-category="{category}"><figure>'
-            f'<button type="button" data-image="{ASSETS[cover]["src"]}" data-source="{esc(ASSETS[cover]["source"])}" '
-            f'aria-label="{esc(title)} – {action}" aria-haspopup="dialog">{img(cover)}'
-            f'<span aria-hidden="true">{badge}</span></button></figure>{thumbnails}'
-            f'<h3>{esc(title)}</h3><p>{esc(label)} · <a href="{href}">Részletek ↗</a></p></article>'
-        )
+    for key,title,category,label,href in works:
+        a=ASSETS[key]
+        cards.append(f'<article class="work" data-category="{category}"><figure><button data-image="{a["src"]}" data-alt="{esc(a["alt"],quote=True)}" data-title="{esc(title,quote=True)}" data-source="{esc(a["source"],quote=True)}" aria-label="{esc(title,quote=True)} nagyítása">{img(key)}<span aria-hidden="true">＋</span></button></figure><h3>{esc(title)}</h3><p>{esc(label)} · <a href="{href}">Részletek ↗</a></p></article>')
     return result+'<div class="gallery-grid">'+''.join(cards)+'</div>'
