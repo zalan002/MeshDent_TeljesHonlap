@@ -75,7 +75,8 @@
   const dialog = document.querySelector('#cookie-dialog');
   const analyticsInput = dialog?.querySelector('[name=analytics]');
   const marketingInput = dialog?.querySelector('[name=marketing]');
-  const measurementEnabled = Boolean(config.ga4Id || config.adsId);
+  // Marketing consent also controls the first-party source shown in the CRM.
+  const crmAttribution = import('/crm-attribution.mjs');
   window.dataLayer = window.dataLayer || [];
   function tag() { window.dataLayer.push(arguments); }
   tag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
@@ -93,8 +94,9 @@
   };
   const syncConsent = () => {
     if (analyticsInput) { analyticsInput.checked = consent.analytics; analyticsInput.disabled = !config.ga4Id; }
-    if (marketingInput) { marketingInput.checked = consent.marketing; marketingInput.disabled = !config.adsId; }
+    if (marketingInput) { marketingInput.checked = consent.marketing; marketingInput.disabled = false; }
     const analytics = consent.analytics && Boolean(config.ga4Id);
+    void crmAttribution.then(module => module.buildAttributionPayload()).catch(() => {});
     const marketing = consent.marketing && Boolean(config.adsId);
     if (config.ga4Id) window['ga-disable-' + config.ga4Id] = !analytics;
     tag('consent', 'update', { analytics_storage: analytics ? 'granted' : 'denied', ad_storage: marketing ? 'granted' : 'denied', ad_user_data: marketing ? 'granted' : 'denied', ad_personalization: 'denied' });
@@ -117,7 +119,7 @@
   };
   const saveConsent = choice => {
     const previous = { ...consent };
-    consent = { analytics: Boolean(config.ga4Id) && (choice === 'all' || choice === 'selected' && analyticsInput.checked), marketing: Boolean(config.adsId) && (choice === 'all' || choice === 'selected' && marketingInput.checked) };
+    consent = { analytics: Boolean(config.ga4Id) && (choice === 'all' || choice === 'selected' && analyticsInput.checked), marketing: (choice === 'all' || choice === 'selected' && marketingInput.checked) };
     try { localStorage.setItem(consentKey, JSON.stringify({ version: 1, savedAt: Date.now(), ...consent })); } catch { /* Use the choice for this page. */ }
     if (!consent.analytics) deleteCookies('analytics');
     if (!consent.marketing) deleteCookies('marketing');
@@ -127,10 +129,10 @@
   };
   document.querySelectorAll('[data-consent]').forEach(button => button.addEventListener('click', () => saveConsent(button.dataset.consent)));
   document.querySelectorAll('[data-cookie-open]').forEach(button => button.addEventListener('click', () => { syncConsent(); dialog?.showModal(); }));
-  const status = measurementEnabled ? 'Az analitikai és hirdetési mérés csak a megfelelő hozzájárulással indul el. Döntését bármikor módosíthatja.' : 'Jelenleg nincs bekapcsolt analitikai vagy hirdetési mérés. Google mérési kódot és reklámsütit nem használunk.';
+  const status = 'Marketinghozzájárulással a látogatás idejére megőrizzük az érkezés forrását és a kampányjelölést, és az űrlap beküldésekor átadjuk a Training Hungary CRM-nek. A hozzájárulás bármikor visszavonható.';
   document.querySelectorAll('[data-measurement-status], [data-consent-description]').forEach(el => { el.textContent = status; });
   syncConsent();
-  if (measurementEnabled && !remembered) dialog?.showModal();
+  if (!remembered) dialog?.showModal();
   document.querySelectorAll('a[href^="tel:"]').forEach(a => a.addEventListener('click', () => track('click_phone')));
   document.querySelectorAll('a[href^="mailto:"]').forEach(a => a.addEventListener('click', () => track('click_email')));
 
@@ -167,12 +169,8 @@
       busy = true; submit.disabled = true; submit.textContent = 'Küldés…'; output.textContent = 'Az üzenet küldése folyamatban.'; output.dataset.error = 'false';
       const message = form.elements.company.value.trim();
       const fields = { last_name: form.elements.last_name.value.trim(), email: form.elements.email.value.trim(), phone, company: topic.value === 'general' ? message : topic.selectedOptions[0].text + '\n\n' + message };
-      const attribution = { page_url: location.origin + location.pathname, landing_url: location.origin + location.pathname };
-      if (consent.marketing) for (const key of ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_id']) {
-        const value = new URLSearchParams(location.search).get(key);
-        if (value && /^[a-zA-Z0-9_.-]{1,200}$/.test(value)) attribution[key] = value;
-      }
       try {
+        const attribution = await crmAttribution.then(module => module.buildAttributionPayload()).catch(() => ({}));
         const result = await session.submitFinal(fields, attribution);
         if (!result.ok) throw new Error(result.error);
         output.textContent = 'Köszönjük! Üzenetét rögzítettük, hamarosan jelentkezünk.';
